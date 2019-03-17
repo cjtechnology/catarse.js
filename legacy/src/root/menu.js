@@ -56,11 +56,11 @@ const menu = {
                 [
                     m(`a.header-link.w-nav-link[href=\'/${window.I18n.locale}/start?ref=ctrse_header\']`,
                         { onclick: () => m.route('/start') },
-                        'Comece seu projeto'
+                        window.I18n.t('projects.new.page-title')
                     ),
                     m(`a.header-link.w-nav-link[href=\'/${window.I18n.locale}/explore?ref=ctrse_header\']`,
                         { onclick: () => m.route('/explore') },
-                        'Explore'
+                        window.I18n.t('layouts.header.discover')
                     )
                 ]
             )

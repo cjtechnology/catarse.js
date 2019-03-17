@@ -23,7 +23,7 @@ const search = {
                                         action,
                                         method
                                     },
-                                    m('input[type="text"][name="pg_search"][placeholder="Busque projetos"]#pg_search_inside.w-input.text-field.negative.prefix')
+                                    m(`input[type="text"][name="pg_search"][placeholder=${window.I18n.t('layouts.header.search')}]#pg_search_inside.w-input.text-field.negative.prefix`)
                                 )
                             ])
                         ),

@@ -50,7 +50,7 @@ const errorContributionModalContent = {
                         m('a.btn.btn-medium.w-button', {
                             onclick: () => args.updateStatus('error')
                         },
-                            'Sim!'
+                            window.I18n.t('yes')
                         )
                     ),
                     m('.w-col.w-col-5',

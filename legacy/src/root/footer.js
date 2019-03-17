@@ -14,13 +14,7 @@ const footer = {
                                         m('.w-col.w-col-4.w-col-small-4.w-col-tiny-4.w-hidden-tiny',
                                             [
                                                 m('.footer-full-signature-text.fontsize-small',
-                                                    'Bem-vindo'
-                                                ),
-                                                m('a.link-footer[href=\'http://crowdfunding.catarse.me/quem-somos?ref=ctrse_footer\']',
-                                                    ' Quem Somos'
-                                                ),
-                                                m('a.link-footer[href=\'http://crowdfunding.catarse.me/paratodos?ref=ctrse_footer\']',
-                                                    ' Como funciona'
+                                                    window.I18n.t('layouts.footer.titles.contact')
                                                 ),
                                                 m('a.link-footer[href=\'http://blog.catarse.me\']',
                                                     ' Blog'
@@ -39,7 +33,7 @@ const footer = {
                                                     ' Retrospectiva 2018'
                                                 ),
                                                 m('.footer-full-signature-text.fontsize-small',
-                                                    'Redes Sociais'
+                                                    window.I18n.t('layouts.footer.titles.social')
                                                 ),
                                                 m('a.link-footer[href=\'http://facebook.com/catarse.me\']',
                                                     [
@@ -74,37 +68,19 @@ const footer = {
                                         m('.w-col.w-col-4.w-col-small-4.w-col-tiny-4.footer-full-firstcolumn',
                                             [
                                                 m('.footer-full-signature-text.fontsize-small',
-                                                    'Ajuda'
+                                                    window.I18n.t('layouts.footer.titles.about')
                                                 ),
                                                 m('a.link-footer[href=\'http://suporte.catarse.me?ref=ctrse_footer/\']',
-                                                    ' Central de Suporte'
+                                                    window.I18n.t('layouts.footer.links.help_support')
                                                 ),
                                                 h.getUser() ?
                                                     m('a.link-footer[href=\'https://suporte.catarse.me/hc/pt-br/signin?return_to=https%3A%2F%2Fsuporte.catarse.me%2Fhc%2Fpt-br%2Frequests%2Fnew&locale=19\'][target="_BLANK"]',
-                                                      ' Contato'
+                                                      window.I18n.t('layouts.footer.links.contact')
                                                      )
                                                     :
                                                     m('a.link-footer[href=\'http://suporte.catarse.me/hc/pt-br/requests/new\'][target="_BLANK"]',
-                                                      ' Contato'
-                                                     ),
-                                                m('a.link-footer[href=\'https://www.ofinanciamentocoletivo.com.br/?ref=ctrse_footer\']',
-                                                  ' Escola Catarse'
-                                                 ),
-                                                m('a.link-footer[href=\'http://crowdfunding.catarse.me/nossa-taxa?ref=ctrse_footer\']',
-                                                  ' Nossa Taxa'
-                                                 ),
-                                                m('a.link-footer[href=\'http://pesquisa.catarse.me/\']',
-                                                  ' Retrato FC Brasil 2013/2014'
-                                                 ),
-                                                m('a.link-footer[href=\'http://suporte.catarse.me/hc/pt-br/articles/115002214043-Responsabilidades-e-Seguran%C3%A7a?ref=ctrse_footer\']',
-                                                  ' Responsabilidades e Segurança'
-                                                 ),
-                                                m('a.link-footer[href=\'https://crowdfunding.catarse.me/legal/termos-de-uso\'][target="_BLANK"]',
-                                                  ' Termos de uso'
-                                                 ),
-                                                m('a.link-footer[href=\'https://crowdfunding.catarse.me/legal/politica-de-privacidade\'][target="_BLANK"]',
-                                                  ' Política de privacidade'
-                                                 )
+                                                      window.I18n.t('layouts.footer.links.contact')
+                                                     )
                                             ]
                                         ),
                                         m('.w-col.w-col-4.w-col-small-4.w-col-tiny-4.footer-full-lastcolumn',
@@ -113,7 +89,7 @@ const footer = {
                                                     'Faça uma campanha'
                                                 ),
                                                 m(`a.link-footer[href=\'/${window.I18n.locale}/start?ref=ctrse_footer\']`,
-                                                    ' Comece seu projeto'
+                                                    window.I18n.t('projects.new.page-title')
                                                 ),
                                                 m('a.link-footer[href=\'http://crowdfunding.catarse.me/financiamento-coletivo-musica-independente?ref=ctrse_footer\']',
                                                     ' Música no Catarse'

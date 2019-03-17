@@ -54,7 +54,7 @@ const CheckEmail = {
                         m('.w-col.w-col-3', [
                             m('button.btn.btn-medium.btn-terciary.w-button', {
                                 onclick: ctrl.checkEmail
-                            }, 'Sim!')
+                            }, window.I18n.t('yes'))
                         ]),
                         m('.w-col.w-col-3', [
                             m(`a.btn.btn-medium.w-button[href="/users/${user.id}/edit#about_me"]`, 'Editar o email')

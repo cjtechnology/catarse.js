@@ -23,7 +23,7 @@ const blogBanner = {
                             ),
                             m('.fontsize-large.u-marginbottom-60.text-success',
                                 m('a.link-hidden-success[href=\'http://blog.catarse.me\'][target=\'__blank\']',
-                                    'Blog do Catarse'
+                                    window.I18n.t('projects.index.blog')
                                 )
                             )
                         ]

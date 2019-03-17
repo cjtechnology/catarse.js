@@ -12,7 +12,7 @@ const menuSearch = {
                             m('div', { style: { display: 'none' } },
                                   m('input[name=\'utf8\'][type=\'hidden\'][value=\'✓\']')
                               ),
-                            m('input.w-input.text-field.prefix.search-input[autocomplete=\'off\'][id=\'pg_search\'][name=\'pg_search\'][placeholder=\'Busque projetos\'][type=\'text\']')
+                            m(`input.w-input.text-field.prefix.search-input[autocomplete=\'off\'][id=\'pg_search\'][name=\'pg_search\'][placeholder=\'${window.I18n.t('layouts.header.search')}\'][type=\'text\']`)
                         ]
                       ),
                     m(`.search-pre-result.w-hidden[data-searchpath=\'/${window.I18n.locale}/auto_complete_projects\']`,

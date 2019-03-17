@@ -50,7 +50,7 @@ const deliverContributionModalContent = {
                         m('a.btn.btn-medium.w-button', {
                             onclick: () => args.updateStatus('delivered')
                         },
-                            'Sim!'
+                            window.I18n.t('yes')
                         )
                     ),
                     m('.w-col.w-col-5',

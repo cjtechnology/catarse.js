@@ -22,6 +22,12 @@ Running `npm link` in the root folder of the catarse.js project and then `npm li
 
 You can use webpack-dev-server to provide your assets locally by running `npm build:dev` and running the rails application with `webpack_dev_server` configuration set to true in config/application.rb
 
+
+## fix flow-bin problem
+
+npm install natives@1.1.6
+
+
 ## Project Architecture
 
 Webpack compiles the code found inside the /src directory and outputs into the /dist folder as catarse.js
