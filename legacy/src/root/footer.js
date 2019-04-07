@@ -156,10 +156,14 @@ const footer = {
                                             ]
                                         )
                                     ),
-                                    m('.footer-full-signature-text.fontsize-small',
-                                        'Change language'
-                                    ),
-                                    m('[id=\'google_translate_element\']')
+                                    m('.lineheight-loose',
+                                        m(`a.link-footer-inline[href='/change_locale?locale=zh-CN']`,
+                                           '中文  '
+                                        ),
+                                        m(`a.link-footer-inline[href=/change_locale?locale=en]`,
+                                           '英文'
+                                        )
+                                    )
                                 ]
                             )
                         ]
@@ -170,8 +174,8 @@ const footer = {
                         [
                             m('img.u-marginbottom-20[alt=\'Logo footer\'][src=\'/assets/logo-footer.png\']'),
                             m('.lineheight-loose',
-                                m('a.link-footer-inline[href=\'http://github.com/catarse/catarse\']',
-                                   ` Feito com amor | ${new Date().getFullYear()} | Open source`
+                                m('a.link-footer-inline[href=\'http://realcapital.com.au\']',
+                                   ` Real Capital | ${new Date().getFullYear()} `
                                 )
                             )
                         ]

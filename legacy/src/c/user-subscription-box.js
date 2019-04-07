@@ -279,7 +279,7 @@ const userSubscriptionBox = {
                     m('.u-marginbottom-20.w-col.w-col-3', [
                         m('.fontsize-base.fontweight-semibold.lineheight-tighter', ctrl.showLastSubscriptionVersionValueIfHasOne()),
                         m('.fontcolor-secondary.fontsize-smaller.fontweight-semibold',
-                            `Iniciou há ${moment(subscription.created_at).locale('pt').fromNow(true)}`
+                            `Iniciou há ${moment(subscription.created_at).locale(window.I18n.locale).fromNow(true)}`
                         ),
                         m('.u-marginbottom-10', ctrl.showLastSubscriptionVersionPaymentMethodIfHasOne()),
                         m('a.alt-link.fontsize-smallest[href="javascript:void(0);"]', {

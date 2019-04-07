@@ -82,7 +82,7 @@ const paymentVM = () => {
 
     const getLocale = () => isInternational()
         ? { locale: 'en' }
-        : { locale: 'pt' };
+        : { locale: window.I18n.locale };
 
     const faq = (mode = 'aon') => window.I18n.translations[window.I18n.currentLocale()].projects.faq[mode],
         currentUser = h.getUser() || {};

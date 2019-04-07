@@ -17,27 +17,6 @@ const
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     },
   	selfOrEmpty = (obj, emptyState = '') => obj || emptyState,
-    setMomentifyLocale = () => {
-        moment.locale('pt', {
-            months: 'Janeiro_Fevereiro_Março_Abril_Maio_Junho_Julho_Agosto_Setembro_Outubro_Novembro_Dezembro'.split('_'),
-            monthsShort: 'jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez'.split('_'),
-            relativeTime: {
-                future: 'em %s',
-                past: 'há %s',
-                s: 'segundos',
-                m: 'um minuto',
-                mm: '%d minutos',
-                h: 'uma hora',
-                hh: '%d horas',
-                d: 'um dia',
-                dd: '%d dias',
-                M: 'um mês',
-                MM: '%d meses',
-                y: 'um ano',
-                yy: '%d anos'
-            }
-        });
-    },
     lastDayOfNextMonth = () => moment().add(1, 'months').format('D/MMMM'),
     existy = x => x != null,
 
@@ -45,7 +24,7 @@ const
 
     momentify = (date, format) => {
         format = format || 'DD/MM/YYYY';
-        return date ? moment(date).locale('pt').format(format) : 'no date';
+        return date ? moment(date).locale(window.I18n.locale).format(format) : 'no date';
     },
 
     getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
@@ -932,7 +911,6 @@ const
         return p.promise;
     };
 
-setMomentifyLocale();
 closeFlash();
 closeModal();
 checkReminder();
