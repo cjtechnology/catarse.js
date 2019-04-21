@@ -79,21 +79,21 @@ const usersEdit = {
                 }
             },
                         m('.w-container', [
-                            m(`a.dashboard-nav-link${(ctrl.hash() === '#contributions' ? '.selected' : '')}[data-target='#dashboard_contributions'][href='#contributions'][id='dashboard_contributions_link']`, 'Apoiados'),
+                            m(`a.dashboard-nav-link${(ctrl.hash() === '#contributions' ? '.selected' : '')}[data-target='#dashboard_contributions'][href='#contributions'][id='dashboard_contributions_link']`, window.I18n.t("users.edit.contributions")),
                             m(`a.dashboard-nav-link${(ctrl.hash() === '#projects' ? '.selected' : '')}[data-target='#dashboard_projects'][href='#projects'][id='dashboard_projects_link']`,
-                                'Criados'
+                                window.I18n.t("users.edit.projects")
                             ),
                             m(`a.dashboard-nav-link${(ctrl.hash() === '#about_me' ? '.selected' : '')}[data-target='#dashboard_about_me'][href='#about_me'][id='dashboard_about_me_link']`,
-                              'Perfil Público'
+                              window.I18n.t("shared.menus.user.about")
                             ),
                             m(`a.dashboard-nav-link${(ctrl.hash() === '#settings' ? '.selected' : '')}[data-target='#dashboard_settings'][href='#settings'][id='dashboard_settings_link']`,
-                              'Dados cadastrais'
+                              window.I18n.t("shared.menus.user.access_address")
                             ),
                             m(`a.dashboard-nav-link${(ctrl.hash() === '#notifications' ? '.selected' : '')}[data-target='#dashboard_notifications'][href='#notifications'][id='dashboard_notifications_link']`,
-                                'Notificações'
+                                window.I18n.t("shared.menus.user.notifications")
                             ),
                             m(`a.dashboard-nav-link${(ctrl.hash() === '#balance' ? '.selected' : '')}[data-target='#dashboard_balance'][href='#balance'][id='dashboard_balance_link']`,
-                              'Saldo'
+                              window.I18n.t("shared.menus.user.balance")
                              ),
                             m(`a.dashboard-nav-link.u-right-big-only[href='/${window.I18n.locale}/users/${user.id}']`, {
                                 config: m.route,
@@ -103,7 +103,7 @@ const usersEdit = {
                                     });
                                 }
                             },
-                                'Ir para o perfil público'
+                                window.I18n.t("users.edit.profil")
                             )
                         ])
                     ),

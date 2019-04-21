@@ -48,7 +48,7 @@ const userCreated = {
 
         return m('.content[id=\'created-tab\']',
             (ctrl.error() ? m.component(inlineError, {
-                message: 'Erro ao carregar os projetos.'
+                message: 'Error loading projects.'
             }) : !ctrl.loader() ? [
                 (!_.isEmpty(projects_collection) ? _.map(projects_collection, project => m.component(projectCard, {
                     project,

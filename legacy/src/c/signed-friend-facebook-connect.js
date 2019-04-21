@@ -20,8 +20,8 @@ const SignedFriendFacebookConnect = {
                 m('.card.card-big', [
                     m('.w-row', [
                         m('.w-col.w-col-8', [
-                            m('.fontsize-largest.u-marginbottom-20', 'Encontre projetos incríveis junto com seus amigos'),
-                            m('.fontsize-small', 'O universo do Catarse junto com a sua rede do Facebook te farão descobrir projetos incríveis!')
+                            m('.fontsize-largest.u-marginbottom-20', 'Find amazing projects with your friends'),
+                            m('.fontsize-small', 'Real Capital universe along with your Facebook network will make you discover incredible projects!')
                         ]),
                         m('.w-col.w-col-4.u-text-center', [
                             m('.fontsize-smallest.u-marginbottom-10', `${total} dos seus amigos estão no Catarse!`),

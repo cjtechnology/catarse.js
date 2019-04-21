@@ -10,8 +10,8 @@ import Chart from 'chart.js';
     Chart.defaults.global.scaleFontFamily = 'proxima-nova';
 
     // NOTE: comment when need to use multilanguage i18n support
-    window.I18n.defaultLocale = 'zh-CN';
-    window.I18n.locale = 'zh-CN';
+    window.I18n.defaultLocale = 'en';
+    window.I18n.locale = 'en';
 
     const adminRoot = document.getElementById('new-admin');
 

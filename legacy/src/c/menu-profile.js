@@ -65,14 +65,14 @@ const menuProfile = {
                                 m('.w-col.w-col-12',
                                     [
                                         m('.fontweight-semibold.fontsize-smaller.u-marginbottom-10',
-                                            'Meu histórico'
+                                            window.I18n.t("shared.menus.user.contributions_history")
                                         ),
                                         m('ul.w-list-unstyled.u-marginbottom-20',
                                             [
                                                 m('li.lineheight-looser',
                                                   m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#balance']`,
                                                     m('span', [
-                                                        'Saldo ',
+                                                        `${window.I18n.t("users.balance.totals")} `,
                                                         (ctrl.userBalance() > 0 ? m('span.fontcolor-secondary',
                                                           `R$ ${h.formatNumber(ctrl.userBalance(), 2, 3)}`) : ''),
                                                     ])
@@ -80,12 +80,12 @@ const menuProfile = {
                                                  ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#contributions']`,
-                                                        'Histórico de apoio'
+                                                        window.I18n.t("shared.menus.user.contributions_history_nav")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
                                                   m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#projects']`,
-                                                    'Projetos criados'
+                                                    window.I18n.t("shared.menus.user.projects_created")
                                                    )
                                                  )
                                             ]
@@ -97,22 +97,22 @@ const menuProfile = {
                                             [
                                                 m('li.lineheight-looser',
                                                   m('a.alt-link.fontsize-smaller[href=\'/connect-facebook/\']',
-                                                    'Encontre amigos'
+                                                    window.I18n.t("shared.menus.user.find_friends")
                                                    ),
                                                  ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#about_me']`,
-                                                        'Perfil público'
+                                                      window.I18n.t("shared.menus.user.about")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#notifications']`,
-                                                        'Notificações'
+                                                        window.I18n.t("shared.menus.user.notifications")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}/edit#settings']`,
-                                                        'Dados cadastrais'
+                                                      window.I18n.t("shared.menus.user.access_address")
                                                     )
                                                 )
                                             ]
@@ -125,12 +125,12 @@ const menuProfile = {
                                             [
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/users\']`,
-                                                        'Usuários'
+                                                      window.I18n.t("admin.users.index.menu")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin\']`,
-                                                        'Apoios'
+                                                        window.I18n.t("admin.statistics.index.total_contributions")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
@@ -140,12 +140,12 @@ const menuProfile = {
                                                  ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/admin/financials\']`,
-                                                        'Rel. Financeiros'
+                                                      window.I18n.t("admin.statistics.index.menu")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/projects\']`,
-                                                        'Admin projetos'
+                                                      window.I18n.t("admin.projects.index.menu")
                                                     )
                                                 ),
                                                 m('li.lineheight-looser',
@@ -165,14 +165,14 @@ const menuProfile = {
                                                 )
                                             ]
                                         ) : '',
-                                        m('.fontsize-mini', 'Seu e-mail de cadastro é: '),
+                                        m('.fontsize-mini', `${window.I18n.t("shared.menus.user.your_email")}`),
                                         m('.fontsize-smallest.u-marginbottom-20', [
                                             m('span.fontweight-semibold', `${user.email} `),
-                                            m(`a.alt-link[href='/${window.I18n.locale}/users/${user.id}/edit#about_me']`, 'alterar e-mail')
+                                            m(`a.alt-link[href='/${window.I18n.locale}/users/${user.id}/edit#about_me']`, `${window.I18n.t("shared.menus.user.update_email")}`)
                                         ]),
                                         m('.divider.u-marginbottom-20'),
                                         m(`a.alt-link[href=\'/${window.I18n.locale}/logout\']`,
-                                            'Sair'
+                                            window.I18n.t("shared.header_channel.logout")
                                         )
                                     ]
                                 ),

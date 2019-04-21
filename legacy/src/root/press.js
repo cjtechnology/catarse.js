@@ -156,7 +156,7 @@ const press = {
                             m('.w-form',
                                 m(`form[accept-charset='UTF-8'][action='${h.getNewsletterUrl()}'][id='mailee-form'][method='post']`, [
                                     m('.w-form.footer-newsletter',
-                                        m('input.w-input.text-field.prefix[id=\'EMAIL\'][label=\'email\'][name=\'EMAIL\'][placeholder=\'Digite seu email\'][type=\'email\']')
+                                        m(`input.w-input.text-field.prefix[id=\'EMAIL\'][label=\'email\'][name=\'EMAIL\'][placeholder=\'${window.I18n.t('layouts.footer.texts.email')}\'][type=\'email\']`)
                                     ),
                                     m('button.w-inline-block.btn.btn-edit.postfix.btn-attached[type=\'submit\']',
                                         m('img.footer-news-icon[alt=\'Icon newsletter\'][src=\'/assets/catarse_bootstrap/icon-newsletter-9c3ff92b6137fbdb9d928ecdb34c88948277a32cdde3e5b525e97d57735210f5.png\']')

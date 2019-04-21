@@ -5,7 +5,7 @@ beforeAll(function(){
         component: filterMain,
         data: {
           vm: m.prop(),
-          placeholder: 'Busque por projeto, email, Ids do usuário e do apoio...'
+          placeholder: 'Search by project, email, user and support ids..'
         }
       },
       { //state

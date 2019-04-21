@@ -24,7 +24,7 @@ const adminProjects = {
                 component: filterMain,
                 data: {
                     vm: filterVM.full_text_index,
-                    placeholder: 'Busque por projeto, permalink, email, nome do realizador...',
+                    placeholder: 'Search by project, permalink, email, name of the director ...',
                 },
             }, { // status
                 component: filterDropdown,

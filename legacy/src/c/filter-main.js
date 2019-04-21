@@ -14,7 +14,7 @@ const filterMain = {
                 })
             ]),
             m('.w-col.w-col-4', [
-                m(`input#filter-btn${btnClass}[type="submit"][value="Buscar"]`)
+                m(`input#filter-btn${btnClass}[type="submit"][value="${window.I18n.t("shared.search_text")}"]`)
             ])
         ]);
     }

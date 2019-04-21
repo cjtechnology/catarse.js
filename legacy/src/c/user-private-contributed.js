@@ -76,7 +76,7 @@ const userPrivateContributed = {
             failedCollection = ctrl.failedPages.collection();
 
         return m('.content[id=\'private-contributed-tab\']', ctrl.error() ? m.component(inlineError, {
-            message: 'Erro ao carregar os projetos.'
+            message: 'Error loading projects.'
         }) : ctrl.loader() ? h.loader() :
             (_.isEmpty(subsCollection) && _.isEmpty(onlineCollection) && _.isEmpty(successfulCollection) && _.isEmpty(failedCollection)) ?
             m('.w-container',
@@ -84,9 +84,7 @@ const userPrivateContributed = {
                     m('.w-col.w-col-3'),
                     m('.w-col.w-col-6', [
                         m('.fontsize-large.u-marginbottom-30', [
-                            'Você ainda não apoiou nenhum projeto no',
-                            m.trust('&nbsp;'),
-                            'Catarse...'
+                            window.I18n.t("users.edit.contributions_fields.no-project"),
                         ]),
                         m('.w-row', [
                             m('.w-col.w-col-3'),
@@ -97,7 +95,7 @@ const userPrivateContributed = {
                                         m.route('/explore');
                                     }
                                 },
-                                    'Apoie agora!'
+                                    window.I18n.t("users.edit.contributions_fields.contribute")
                                 )
                             ),
                             m('.w-col.w-col-3')

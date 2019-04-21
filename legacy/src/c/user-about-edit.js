@@ -82,7 +82,7 @@ const userAboutEdit = {
                         if (_.isArray(err.errors)) {
                             errorsArray(errorsArray().concat(err.errors));
                         } else {
-                            errors('Erro ao atualizar informações.');
+                            errors('Error updating info');
                         }
                         pushErrosMessage();
                         showError(true);
@@ -133,7 +133,7 @@ const userAboutEdit = {
                     }
                     parsedErrors = userAboutVM.mapRailsErrors(err.errors_json);
                     emailHasError(parsedErrors.hasError('email'));
-                    errors('Erro ao atualizar informações.');
+                    errors('Error updating info');
 
                     showError(true);
                     loading(false);
@@ -243,10 +243,10 @@ const userAboutEdit = {
                             m('.w-col.w-col-10.w-col-push-1', [!user.is_admin ? '' : m('.w-row.u-marginbottom-30.card.card-terciary', [
                                 m('.w-col.w-col-5.w-sub-col', [
                                     m('label.field-label.fontweight-semibold',
-                                            'Endereço do seu perfil'
+                                            window.I18n.t("users.edit.about_fields.profil_address_title")
                                         ),
                                     m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                            'Seu perfil público pode ter uma URL personalizada. Escolha uma fácil de guardar!    '
+                                            `${window.I18n.t("users.edit.about_fields.profil_address_description")}.   `
                                         )
                                 ]),
                                 m('.w-col.w-col-7',
@@ -259,7 +259,7 @@ const userAboutEdit = {
                                                 })
                                             ),
                                             m('.w-col.w-col-6.w-col-small-6.w-col-tiny-6.text-field.postfix.no-hover',
-                                                m('.fontcolor-secondary.fontsize-smaller', '  .catarse.me')
+                                                m('.fontcolor-secondary.fontsize-smaller', '  .realcapital.me')
                                             )
                                         ])
                                     )
@@ -269,7 +269,7 @@ const userAboutEdit = {
                                         'Email'
                                     ),
                                     m('.fontsize-small.u-marginbottom-30',
-                                        'Mantenha esse email atualizado pois ele é o canal de comunicação entre você, a equipe do Catarse e a equipe dos projetos que você apoiou. '
+                                        "Keep this email updated because it is the communication channel between you, the RealCapital team and the project team that you supported."
                                     ),
                                     m('.fontsize-base.u-marginbottom-40', [
                                         m('span.fontweight-semibold.card.u-radius',
@@ -280,7 +280,7 @@ const userAboutEdit = {
                                                 ctrl.showEmailForm.toggle();
                                             }
                                         },
-                                            'Alterar email'
+                                             window.I18n.t("users.edit.about_fields.alter_email")
                                         )
                                     ]),
                                     m(`${ctrl.showEmailForm() ? '' : '.w-hidden'}.u-marginbottom-20.w-row[id=\'email_update_form\']`, [

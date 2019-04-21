@@ -80,7 +80,7 @@ const userBalanceWithdrawHistory = {
                                     m('.w-col.w-col-2',
                                         m('a.btn.btn-medium.btn-terciary.w-button[href=\'javascript:void(0);\']', {
                                             onclick: ctrl.balanceTransfersList.nextPage
-                                        }, 'Carregar mais')
+                                        }, window.I18n.t("shared.load_more"))
                                     ),
                                     m('.w-col.w-col-5')
                                 ])

@@ -30,7 +30,7 @@ const adminList = {
                                   m('.w-row', [
                                       m('.w-col.w-col-2', [
                                           m('.fontweight-semibold', list.total()),
-                                          ` ${label.toLowerCase()} encontrados`
+                                          ` ${label.toLowerCase()} ${window.I18n.t("found_plural")}`
                                       ]),
                                       (args.vm && args.vm.hasInputAction ? m('.w-col-10.w-col', args.vm.inputActions()) : '')
                                   ])
@@ -54,7 +54,7 @@ const adminList = {
                                         h.loader() :
                                         m('button#load-more.btn.btn-medium.btn-terciary', {
                                             onclick: list.nextPage
-                                        }, 'Carregar mais'),
+                                        }, window.I18n.t("shared.load_more")),
                                     ])
                                 ])
                             ])

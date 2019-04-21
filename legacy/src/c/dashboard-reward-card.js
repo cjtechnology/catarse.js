@@ -173,13 +173,13 @@ const dashboardRewardCard = {
                                     m('.w-sub-col.w-col.w-col-4',
                                         m('button.btn.btn-small.w-button', {
                                             onclick: ctrl.saveReward
-                                        }, 'Salvar')
+                                        }, window.I18n.t('shared.save_text'))
                                     ),
                                     m('.w-sub-col.w-col.w-col-4',
                                         m('button.btn.btn-small.btn-terciary.w-button', {
                                             onclick: ctrl.toggleShowLimit
                                         },
-                                            'Cancelar'
+                                            window.I18n.t('shared.cancel_text')
                                         )
                                     ),
                                     m('.w-clearfix.w-col.w-col-4')

@@ -70,7 +70,7 @@ const usersShow = {
                       ) : '') : h.loader()),
                       m(`a[data-target=\'#contributed-tab\'][href=\'#contributed\'][id=\'contributed_link\'][class=\'dashboard-nav-link ${(ctrl.hash() === '#contributed' ? 'selected' : '')}\']`,
                           [
-                              'Apoiados ',
+                              `${window.I18n.t("users.edit.contributions")} `,
                               m.trust('&nbsp;'),
                               m('span.badge',
                                   user.total_contributed_projects
@@ -79,7 +79,7 @@ const usersShow = {
                       ),
                       m(`a[data-target=\'#created-tab\'][href=\'#created\'][id=\'created_link\'][class=\'dashboard-nav-link ${(ctrl.hash() === '#created' ? 'selected' : '')}\']`,
                           [
-                              'Criados ',
+                              `${window.I18n.t("users.edit.projects")} `,
                               m.trust('&nbsp;'),
                               m('span.badge',
                                   user.total_published_projects
@@ -87,7 +87,7 @@ const usersShow = {
                           ]
                       ),
                       m(`a[data-target=\'#about-tab\'][href=\'#about\'][id=\'about_link\'][class=\'dashboard-nav-link ${(ctrl.hash() === '#about' ? 'selected' : '')}\']`,
-                          'Sobre'
+                          `${window.I18n.t("users.edit.about_fields.about")} `,
                       )
                   ]
               )

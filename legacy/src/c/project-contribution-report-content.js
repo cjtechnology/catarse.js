@@ -166,7 +166,7 @@ const projectContributionReportContent = {
                             (!list.isLoading() ?
                                 (list.isLastPage() ? '' : m('button#load-more.btn.btn-medium.btn-terciary', {
                                     onclick: list.nextPage
-                                }, 'Carregar mais')) : h.loader())
+                                }, window.I18n.t("shared.load_more"))) : h.loader())
                         ])
                     ])
 

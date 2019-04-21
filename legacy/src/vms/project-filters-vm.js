@@ -135,14 +135,14 @@ const projectFiltersVM = () => {
                 header_badges: ['badge-aon-h-margin', 'badge-flex-h-margin']
             },
             all_modes: {
-                title: 'Todos os projetos',
+                title: window.I18n.t("projects.explore.all_projects"),
                 filter: null,
                 isContextual: false,
                 keyName: 'all_modes'
             },
             sub: {
-                title: 'Assinaturas',
-                nicename: 'Assinaturas',
+                title: window.I18n.t("projects.explore.about_us"),
+                nicename: window.I18n.t("projects.explore.about_us"),
                 filter: sub,
                 isContextual: false,
                 keyName: 'sub',

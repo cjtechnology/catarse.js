@@ -20,7 +20,7 @@ const loadMoreBtn = {
               (!collection.isLoading() ?
                (collection.isLastPage() ? '' : m('button#load-more.btn.btn-small.btn-terciary.w-button', {
                    onclick: collection.nextPage
-               }, 'Carregar mais')) : h.loader())
+               }, window.I18n.t("shared.load_more"))) : h.loader())
         ]);
     }
 };

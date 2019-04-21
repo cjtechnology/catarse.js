@@ -41,7 +41,7 @@ const landingSignup = {
             onsubmit: ctrl.submit
         }, [
             m('.w-col.w-col-5', [
-                m(`input${errorClasses}.w-input.text-field.medium[name="EMAIL"][placeholder="Digite seu email"][type="text"]`, {
+                m(`input${errorClasses}.w-input.text-field.medium[name="EMAIL"][placeholder="${window.I18n.t("layouts.footer.texts.email")}"][type="text"]`, {
                     config: h.RDTracker('landing-flex'),
                     onchange: m.withAttr('value', ctrl.email),
                     value: ctrl.email()

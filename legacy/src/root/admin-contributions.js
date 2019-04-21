@@ -24,7 +24,7 @@ const adminContributions = {
                 component: filterMain,
                 data: {
                     vm: filterVM.full_text_index,
-                    placeholder: 'Busque por projeto, email, Ids do usuário e do apoio...'
+                    placeholder: 'Search by project, email, user and support ids..'
                 }
             }, { // delivery_status
                 component: filterDropdown,

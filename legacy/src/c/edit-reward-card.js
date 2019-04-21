@@ -349,7 +349,7 @@ const editRewardCard = {
                                 onclick: () => {
                                     ctrl.saveReward();
                                 }
-                            }, 'Salvar')
+                            },  window.I18n.t('shared.save_text'))
                         ),
                         (reward.newReward ? '' :
                             m('.w-col.w-col-5.w-col-small-5.w-col-tiny-5.w-sub-col-middle',
@@ -357,7 +357,7 @@ const editRewardCard = {
                                     onclick: () => {
                                         reward.edit.toggle();
                                     }
-                                }, 'Cancelar')
+                                }, window.I18n.t('shared.cancel_text'))
                             )),
                         m('.w-col.w-col-1.w-col-small-1.w-col-tiny-1', [
                             m('input[type=\'hidden\'][value=\'false\']'),

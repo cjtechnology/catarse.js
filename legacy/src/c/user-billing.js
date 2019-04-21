@@ -113,7 +113,7 @@ const userBilling = {
                     if (_.isArray(err.errors)) {
                         error(err.errors.join('<br>'));
                     } else {
-                        error('Erro ao atualizar informações.');
+                        error('Error updating info');
                     }
 
                     showError(true);

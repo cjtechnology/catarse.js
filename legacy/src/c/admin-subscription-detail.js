@@ -175,7 +175,7 @@ const adminSubscriptionDetail = {
                     ])),
                     m('.w-inline-block', 
                         (ctrl.notificationsLoader.isLastPage() ? ''
-                        : m('button.btn-inline.btn.btn-small.btn-terciary', { onclick: ctrl.loadNotifications }, 'Carregar mais')))
+                        : m('button.btn-inline.btn.btn-small.btn-terciary', { onclick: ctrl.loadNotifications }, window.I18n.t("shared.load_more"))))
                 ])),
             m('.w-col.w-col-4',
                 m('div', [

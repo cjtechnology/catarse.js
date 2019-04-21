@@ -326,7 +326,7 @@ const projectsExplore = {
                 ),
                 m('.u-text-center.w-container', [
                     m('.explore-text-fixed',
-                        'Quero ver'
+                        window.I18n.t("projects.explore.want_see")
                     ),
                     m('.explore-filter-wrapper', [
                         m('.explore-span-filter', {
@@ -348,7 +348,7 @@ const projectsExplore = {
                                     },
                                     class: ctrl.currentMode() === null ? 'selected' : ''
                                 },
-                                'Todos os projetos'
+                                window.I18n.t("projects.explore.all_projects")
                             ),
                             m("a.explore-filter-link[href=\'javascript:void(0);\']", {
                                     onclick: () => {
@@ -453,7 +453,7 @@ const projectsExplore = {
                     m('.w-row', [
                         m('.w-col.w-col-9.w-col-tiny-9.w-col-small-9',
                             m('.fontsize-large',
-                                `${ctrl.projects().total()} projetos encontrados`
+                                `${ctrl.projects().total()} ${window.I18n.t("project_plural")} ${window.I18n.t("found_plural")}}`
                             )
                         ),
                         m('.w-col.w-col-3.w-col-tiny-3.w-col-small-3')
@@ -519,7 +519,7 @@ const projectsExplore = {
                                     ctrl.projects().nextPage();
                                     return false;
                                 }
-                            }, 'Carregar mais')
+                            }, window.I18n.t("shared.load_more"))
                         ]),
                     ])
                 ])

@@ -28,7 +28,7 @@ const projectRowWithHeader = {
                                 ),
                                 (showFriends ? 
                                     m(`a.btn.btn-small.btn-terciary.btn-inline.u-right-big-only.btn-no-border[href="/connect-facebook?ref=${ref}"]`,  
-                                        'Encontrar amigos'
+                                        window.I18n.t("shared.menus.user.find_friends")
                                     )
                                         :
                                     ''

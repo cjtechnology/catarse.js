@@ -152,7 +152,7 @@ const projectEditWelcome = {
                                                     m('a.btn.btn-large', {
                                                         onclick: ctrl.updateRewards
                                                     },
-                                                        'Salvar'
+                                                        window.I18n.t('shared.save_text')
                                                     )
                                                 ),
                                                 m('.w-col.w-col-3')

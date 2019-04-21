@@ -152,7 +152,7 @@ const projectContributions = {
                     m('.w-col.w-col-2.w-col-push-5', [!list.isLoading() ?
                             list.isLastPage() ? '' : m('button#load-more.btn.btn-medium.btn-terciary', {
                                 onclick: list.nextPage
-                            }, 'Carregar mais') : h.loader(),
+                            }, window.I18n.t("shared.load_more")) : h.loader(),
                     ])
                 ])
             ]))

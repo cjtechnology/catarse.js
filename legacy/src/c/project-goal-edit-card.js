@@ -161,7 +161,7 @@ const projectGoalEditCard = {
                     m('.w-sub-col.w-col.w-col-5',
                         m('button.btn.btn-small.w-button', {
                             onclick: ctrl.saveGoal
-                        }, 'Salvar')
+                        }, window.I18n.t('shared.save_text'))
                     ),
                     (args.goal().id() ?
                         m('.w-sub-col.w-col.w-col-6',
@@ -169,7 +169,7 @@ const projectGoalEditCard = {
                                 onclick: () => {
                                     args.goal().editing.toggle();
                                 }
-                            }, 'Cancelar')
+                            }, window.I18n.t('shared.cancel_text'))
                         ) : ''),
                     m('.w-col.w-col-1',
                         m('button.btn.btn-inline.btn-no-border.btn-small.btn-terciary.fa.fa-lg.fa-trash', {
