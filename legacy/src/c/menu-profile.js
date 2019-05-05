@@ -91,7 +91,7 @@ const menuProfile = {
                                             ]
                                         ),
                                         m('.fontweight-semibold.fontsize-smaller.u-marginbottom-10',
-                                            'Configurações'
+                                            window.I18n.t("shared.menus.user.settings")
                                         ),
                                         m('ul.w-list-unstyled.u-marginbottom-20',
                                             [
@@ -133,16 +133,16 @@ const menuProfile = {
                                                         window.I18n.t("admin.statistics.index.total_contributions")
                                                     )
                                                 ),
-                                                m('li.lineheight-looser',
-                                                  m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/balance-transfers\']`,
-                                                    'Saques'
-                                                   )
-                                                 ),
-                                                m('li.lineheight-looser',
-                                                    m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/admin/financials\']`,
-                                                      window.I18n.t("admin.statistics.index.menu")
-                                                    )
-                                                ),
+                                                // m('li.lineheight-looser',
+                                                //   m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/balance-transfers\']`,
+                                                //     'Saques'
+                                                //    )
+                                                //  ),
+                                                // m('li.lineheight-looser',
+                                                //     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/admin/financials\']`,
+                                                //       window.I18n.t("admin.statistics.index.menu")
+                                                //     )
+                                                // ),
                                                 m('li.lineheight-looser',
                                                     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/projects\']`,
                                                       window.I18n.t("admin.projects.index.menu")
@@ -150,19 +150,19 @@ const menuProfile = {
                                                 ),
                                                 m('li.lineheight-looser',
                                                   m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/subscriptions\']`,
-                                                    'Admin assinaturas'
+                                                    'Admin subscriptions'
                                                    )
                                                  ),
                                                 m('li.lineheight-looser',
                                                   m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/new-admin#/notifications\']`,
-                                                    'Admin notificações'
+                                                    'Admin notifications'
                                                    )
                                                 ),
-                                                m('li.lineheight-looser',
-                                                    m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/dbhero\']`,
-                                                        'Dataclips'
-                                                    )
-                                                )
+                                                // m('li.lineheight-looser',
+                                                //     m(`a.alt-link.fontsize-smaller[href=\'/${window.I18n.locale}/dbhero\']`,
+                                                //         'Dataclips'
+                                                //     )
+                                                // )
                                             ]
                                         ) : '',
                                         m('.fontsize-mini', `${window.I18n.t("shared.menus.user.your_email")}`),

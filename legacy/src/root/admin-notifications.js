@@ -82,7 +82,7 @@ const adminNotifications = {
 								m('.w-form', [
     m('form', [
         m('.fontsize-larger.u-marginbottom-10.u-text-center',
-											'Notificações'
+											window.I18n.t("shared.menus.user.notifications")
 										),
 										(ctrl.loaderTemp() && !_.isEmpty(templatesCollection) ? h.loader() : m(
 											'select.medium.text-field.w-select', {
@@ -92,7 +92,7 @@ const adminNotifications = {
 													templatesCollection,
 													item => m('option', { value: item.label }, item.label)
 												);
-    maped.unshift(m("option[value='']", 'Selecione uma notificação'));
+    maped.unshift(m("option[value='']", 'Select a notification'));
     return maped;
 })())
 										)

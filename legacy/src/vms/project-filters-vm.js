@@ -58,9 +58,9 @@ const projectFiltersVM = () => {
 
         filters = {
             all: {
-                title: 'Todas as Categorias',
+                title: 'All categories',
                 filter: all,
-                nicename: 'Populares',
+                nicename: 'Popular',
                 isContextual: false,
                 keyName: 'all'
             },
@@ -79,56 +79,56 @@ const projectFiltersVM = () => {
             //    keyName: 'recommended_2'
             //},
             contributed_by_friends: {
-                title: 'Amigos',
+                title: 'Friends',
                 filter: contributed_by_friends,
-                nicename: 'Apoiados por amigos',
+                nicename: 'Supported by Friends',
                 isContextual: false,
                 keyName: 'contributed_by_friends'
             },
             recent: {
-                title: 'Recentes',
+                title: 'Recent updated',
                 filter: recent,
-                nicename: 'Recentes',
+                nicename: 'Recent',
                 isContextual: false,
                 keyName: 'recent'
             },
             expiring: {
-                title: 'Reta final',
+                title: 'Final stretch',
                 filter: expiring,
-                nicename: 'Reta final',
+                nicename: 'Final stretch',
                 isContextual: false,
                 keyName: 'expiring'
             },
             finished: {
-                title: 'Todas as Categorias',
+                title: 'All categories',
                 filter: finished,
-                nicename: 'Finalizados',
+                nicename: 'Finished',
                 isContextual: false,
                 keyName: 'finished'
             },
             score: {
-                title: 'Todas as Categorias',
+                title: 'All categories',
                 filter: score,
-                nicename: 'Populares',
+                nicename: 'Popular',
                 isContextual: false,
                 keyName: 'score'
             },
             online: {
-                title: 'No ar',
+                title: 'Online',
                 filter: online,
                 isContextual: false,
                 keyName: 'online'
             },
             successful: {
-                title: 'Todas as Categorias',
+                title: 'All categories',
                 filter: successful,
-                nicename: 'Financiados',
+                nicename: 'Funded',
                 isContextual: false,
                 keyName: 'successful'
             },
             not_sub: {
-                title: 'Projetos pontuais',
-                nicename: 'Projetos pontuais',
+                title: 'Point projects',
+                nicename: 'Point projects',
                 filter: notSub,
                 isContextual: false,
                 keyName: 'not_sub',
@@ -149,7 +149,7 @@ const projectFiltersVM = () => {
                 header_badges: ['badge-sub-h-margin']
             },
             near_me: {
-                title: 'Próximos a mim',
+                title: 'Next to me',
                 filter: nearMe,
                 isContextual: false,
                 keyName: 'near_me'

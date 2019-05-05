@@ -69,7 +69,7 @@ const subProjectNew = {
                                         }
                                     }),
                                     m('.fontcolor-negative.fontsize-larger.u-marginbottom-10',
-                                        'na categoria'
+                                        'Select category'
                                     ),
                                     m('select.w-select.text-field.medium.u-marginbottom-40', {
                                         name: 'project[category_id]',

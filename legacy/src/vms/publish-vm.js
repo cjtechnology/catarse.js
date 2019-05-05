@@ -10,12 +10,12 @@ const aonTerms = (project, expiresAt) => [
                 style: {
                     'font-weight': ' 600'
                 }
-            }, 'O que pode e não pode alterar na página do projeto a partir da publicação?')
+            }, 'What you can and can not change on the project page as of the post?')
         ]),
         m('div', [
-            m('span.fontweight-semibold', 'Você não poderá alterar'), ': a identidade do responsável pelo projeto (Nome / CPF ou Razão Social / CNPJ), a Modalidade de financiamento, o título do projeto, a URL (link) do projeto, a categoria do projeto, a meta de arrecadação, prazo escolhido e as recompensas onde existirem apoios já efetuados. ',
+            m('span.fontweight-semibold', 'You can not change'), `:  the identity of the person responsible for the project (Name / CPF or Social Reason / CNPJ), the financing modality, project title, project URL, project category, collection goal, chosen deadline and rewards where there are support already done.`,
             m('br'), m('br'),
-            m('span.fontweight-semibold', 'Você poderá alterar'), ': o vídeo principal da campanha, o conteúdo da descrição, a imagem do projeto, a frase de efeito, as recompensas onde não existirem apoios efetuados, além de adicionar novas recompensas durante a arrecadação'
+            m('span.fontweight-semibold', 'You can change'), ': the main video of the campaign, the content of the description, the project image, the phrase of effect, the rewards where there are no supports made, in addition to adding new rewards during the collection'
         ])
     ]),
 
@@ -23,9 +23,9 @@ const aonTerms = (project, expiresAt) => [
         m('div', [
             m('span.fontsize-smallest.fontcolor-secondary', '2/9'),
             ' ',
-            m('span.fontweight-semibold', ' Regras da modalidade Tudo-ou-nada')
+            m('span.fontweight-semibold', ' Rules of the All-or-nothing mode')
         ]),
-        m('div', ['Você escolheu a campanha tudo-ou-nada. Dessa maneira, você só irá receber os recursos arrecadados ', m('span.fontweight-semibold', 'caso atinja ou supere a meta de arrecadação'), '. Caso contrário, todos seus apoiadores serão reembolsados. Você será responsável pela entrega das recompensas oferecidas se seu projeto alcançar a meta de arrecadação.'])
+        m('div', ['You chose the all-or-nothing campaign. In this way, you will only receive the funds raised ', m('span.fontweight-semibold', 'if it reaches or exceeds the collection goal'), '. Otherwise, all of your supporters will be reimbursed. You will be responsible for delivering the rewards offered if your project reaches the collection goal.'])
     ]),
 
     m('.w-col.w-col-11', [
@@ -36,9 +36,9 @@ const aonTerms = (project, expiresAt) => [
                 style: {
                     'font-weight': ' 600'
                 }
-            }, 'Meta de arrecadação')
+            }, 'Goal of collection')
         ]),
-        m('div', 'A meta não poderá ser alterada após o publicação do projeto.'),
+        m('div', 'The goal can not be changed after the project has been published.'),
 
     ]),
 
@@ -50,7 +50,7 @@ const aonTerms = (project, expiresAt) => [
                 style: {
                     'font-weight': ' 600'
                 }
-            }, 'Taxas')
+            }, 'Rates')
         ]),
         m('div', [
             'Cobramos 13% sobre o ',
@@ -134,14 +134,14 @@ const flexTerms = project => [
         m('div', [
             m('span.fontsize-smallest.fontcolor-secondary', '1/9'),
             ' ',
-            m('span.fontweight-semibold', 'O que pode e não pode alterar na página do projeto a partir da publicação?')
+            m('span.fontweight-semibold', 'What you can and can not change on the project page as of the post?')
         ]),
         m('div', [
-            m('span.fontweight-semibold', 'Você não poderá alterar'),
+            m('span.fontweight-semibold', 'You can not change'),
             ': a identidade do responsável pelo projeto (Nome / CPF ou Razão Social / CNPJ), a Modalidade de financiamento, o título do projeto, a URL (link) do projeto, a categoria do projeto, a meta de arrecadação,  o prazo (caso já tenha definido), e as recompensas onde existirem apoios já efetuados.',
             m('br'), m('br'),
-            m('span.fontweight-semibold', 'Você poderá alterar'),
-            ': o vídeo principal da campanha, o conteúdo da descrição, a imagem do projeto, a frase de efeito, as recompensas onde não existirem apoios efetuados, além de adicionar novas recompensas durante a arrecadação'
+            m('span.fontweight-semibold', 'You can change'),
+            ': the main video of the campaign, the content of the description, the project image, the phrase of effect, the rewards where there are no supports made, in addition to adding new rewards during the collection'
         ])
     ]),
 
@@ -159,13 +159,13 @@ const flexTerms = project => [
             ' ',
             m('span.fontweight-semibold', 'Meta de arrecadação')
         ]),
-        m('div', 'A meta não poderá ser alterada após o publicação do projeto.')
+        m('div', 'The goal can not be changed after the project has been published.')
     ]),
     m('.w-col.w-col-11', [
         m('div', [
             m('span.fontsize-smallest.fontcolor-secondary', '4/9'),
             ' ',
-            m('span.fontweight-semibold', 'Taxas')
+            m('span.fontweight-semibold', 'Rates')
         ]),
         m('div', [
             'Ao final da campanha, cobraremos 13% sobre o ',
@@ -225,18 +225,18 @@ const subTerms = project => [
             ),
             m.trust('&nbsp;'),
             m('span.fontweight-semibold',
-                'O que pode e não pode alterar na página do projeto a partir da publicação?'
+                'What you can and can not change on the project page as of the post?'
             )
         ]),
         m('div', [
             m('span.fontweight-semibold',
-                'Você não poderá alterar:'
+                'You can not change:'
             ),
             ' a identidade do responsável pelo projeto (Nome / CPF ou Razão Social / CNPJ), a Modalidade de financiamento, o título do projeto, a URL (link) do projeto, a categoria escolhida e as recompensas onde existirem apoios já efetuados.',
             m('br'),
             m('br'),
             m('span.fontweight-semibold',
-                'Você poderá alterar: '
+                'You can change: '
             ),
             'o conteúdo da descrição do projeto, o vídeo principal da campanha, as imagens do projeto, a frase de efeito, as recompensas onde não existirem apoios efetuados, além de adicionar novas recompensas e novas metas durante a arrecadação.'
         ])
@@ -277,7 +277,7 @@ const subTerms = project => [
             ),
             m.trust('&nbsp;'),
             m('span.fontweight-semibold',
-                'Taxas'
+                'Rates'
             )
         ]),
         m('div', [

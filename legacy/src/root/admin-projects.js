@@ -176,7 +176,7 @@ const adminProjects = {
         };
     },
     view: function(ctrl) {
-        const label = 'Projetos';
+        const label = window.I18n.t("shared.projects");
 
         return m('', [
             m.component(adminFilter, {

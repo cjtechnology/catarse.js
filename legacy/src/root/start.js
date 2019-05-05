@@ -411,7 +411,7 @@ const start = {
             ]),
             m('#start-form.w-section.section-large.u-text-center.bg-purple.before-footer', [
                 m('.w-container', [
-                    m('.fontsize-jumbo.fontcolor-negative.u-marginbottom-60', 'Crie o seu rascunho gratuitamente!'),
+                    m('.fontsize-jumbo.fontcolor-negative.u-marginbottom-60', 'Create your sketch for free!'),
                     m('form[action="/projects/fallback_create"][method="GET"].w-row.w-form', {
                         onsubmit: (e) => {
                             h.analytics.oneTimeEvent({ cat: 'project_create', act: 'create_form_submit' })(e);
@@ -433,7 +433,7 @@ const start = {
                                         m.withAttr('value', ctrl.projectName)(e);
                                     }
                                 }),
-                                m('.fontsize-larger.fontcolor-negative.u-marginbottom-10', 'na categoria'),
+                                m('.fontsize-larger.fontcolor-negative.u-marginbottom-10', 'Category'),
                                 m('select.w-select.text-field.medium.u-marginbottom-40', {
                                     name: 'project[category_id]',
                                     class: ctrl.projectCategoryError() ? 'error' : '',

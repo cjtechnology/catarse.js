@@ -23,7 +23,7 @@ const adminUsers = {
                 component: filterMain,
                 data: {
                     vm: filterVM.full_text_index,
-                    placeholder: 'Busque por nome, e-mail, Ids do usuário...',
+                    placeholder: 'Search by name, email, user ids ...',
                 },
             }, { // status
                 component: filterDropdown,
@@ -62,7 +62,7 @@ const adminUsers = {
         };
     },
     view: function(ctrl) {
-        const label = 'Usuários';
+        const label = window.I18n.t("shared.users");
 
         return m('', [
             m.component(adminFilter, {
