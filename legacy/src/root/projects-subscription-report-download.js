@@ -38,13 +38,13 @@ const projectSubscriptionReportDownload = {
                                 m('span.fa.fa-download',
                                     m.trust('&nbsp;')
                                 ),
-                                'Baixar relatórios'
+                                'Download reports'
                             ]),
                             m('.card.u-radius.u-marginbottom-20', [
                                 m('span.fontweight-semibold',
-                                    m.trust('Atenção:')
+                                    m.trust('Attention:')
                                 ),
-                                'Ao realizar o download desses dados, você se compromete a armazená-los em local seguro e respeitar o direitos dos usuários conforme o que está previsto nos Termos de Uso e na política de privacidade do Catarse.'
+                                'By downloading this data, you agree to store it in a safe place and respect the rights of users as provided in the Terms of Use and the privacy policy of RealCapital.'
                             ]),
                             m('ul.w-list-unstyled', [
                                 m('li.fontsize-smaller.u-marginbottom-10',

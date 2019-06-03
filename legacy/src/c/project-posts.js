@@ -101,7 +101,7 @@ const projectPosts = {
                 m('.w-row', [
                     (!_.isUndefined(args.post_id) ? m('.w-col.w-col-2.w-col-push-5',
                                                       m(`a#load-more.btn.btn-medium.btn-terciary[href=\'/projects/${project.project_id}#posts']`, {
-                                                         }, 'Ver todos')
+                                                         }, `${window.I18n.t('projects.index.see_all')}`)
                                                        ) :
                         (!list.isLoading() ?
                             (list.collection().length === 0 && args.projectContributions().length === 0) ?

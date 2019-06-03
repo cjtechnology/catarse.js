@@ -24,17 +24,17 @@ const downloadReports = {
                                             m('span.fa.fa-download',
                                                 m.trust('&nbsp;')
                                             ),
-                                            'Baixar relatórios'
+                                            'Download reports'
                                         ]),
                                         m('.card.u-radius.u-marginbottom-20', [
                                             m('span.fontweight-semibold',
-                                                m.trust('Atenção: ')
+                                                m.trust('Attention: ')
                                             ),
                                             (
                                                 isFailed ?
                                                     'Devido a nossa política de privacidade, não podemos informar dados pessoais de apoiadores em projetos que não tenham sido financiados.'
                                                 :
-                                                    'Ao realizar o download desses dados, você se compromete a armazená-los em local seguro e respeitar o direitos dos usuários conforme o que está previsto nos Termos de Uso e na política de privacidade do Catarse.'
+                                                    'By downloading this data, you agree to store it in a safe place and respect the rights of users as provided in the Terms of Use and the privacy policy of RealCapital.'
                                             )                                            
                                         ]),
                                         (
@@ -42,7 +42,7 @@ const downloadReports = {
                                             m('ul.w-list-unstyled', [
                                                 m('li.fontsize-smaller.u-marginbottom-10',
                                                     m('div', [
-                                                        'Apoiadores confirmados ',
+                                                        'Confirmed Supporters ',
                                                         m.trust('&nbsp;'),
                                                         m(`a.alt-link[href='/${window.I18n.locale}/reports/contribution_reports_for_project_owners.csv?project_id=${project.project_id}&amp;state=${paymentState}']`,
                                                             'CSV'
@@ -82,7 +82,7 @@ const downloadReports = {
                                                 m('li.divider.u-marginbottom-10'),
                                                 m('li.fontsize-smaller.u-marginbottom-10',
                                                     m('div', [
-                                                        'Apoiadores que não selecionaram recompensa',
+                                                        'Supporters who did not select reward',
                                                         m.trust('&nbsp;'),
                                                         m.trust('&nbsp;'),
                                                         m(`a.alt-link[href='/${window.I18n.locale}/reports/contribution_reports_for_project_owners.csv?project_id=${project.project_id}&amp;reward_id=0&amp;state=${paymentState}']`,
@@ -99,7 +99,7 @@ const downloadReports = {
                                                 m('li.divider.u-marginbottom-10'),
                                                 m('li.fontsize-smaller.u-marginbottom-10',
                                                     m('div', [
-                                                        'Apoios cancelados após o pagamento',
+                                                        'Support canceled after payment',
                                                         m.trust('&nbsp;'),
                                                         m.trust('&nbsp;'),
                                                         m(`a.alt-link[href='/${window.I18n.locale}/reports/contribution_reports_for_project_owners.csv?project_id=${project.project_id}&amp;state=refunded,chargeback']`,
@@ -117,7 +117,7 @@ const downloadReports = {
                                                     m('li.divider.u-marginbottom-10'),
                                                     m('li.fontsize-smaller.u-marginbottom-10',
                                                         m('div', [
-                                                            `R$ ${reward.minimum_value} ${reward.description.substring(0, 40)}...;`,
+                                                            `$ ${reward.minimum_value} ${reward.description.substring(0, 40)}...;`,
                                                             m(`a.alt-link[href='/${window.I18n.locale}/reports/contribution_reports_for_project_owners.csv?project_id=${project.project_id}&amp;reward_id=${reward.id}&amp;state=${paymentState}']`,
                                                                 'CSV'
                                                             ),

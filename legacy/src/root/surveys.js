@@ -198,7 +198,7 @@ const surveys = {
                         m('.fontweight-semibold.header.table-row.w-hidden-small.w-hidden-tiny.w-row', [
                             m('.table-col.w-col.w-col-3',
                                 m('div',
-                                    'Recompensa'
+                                    'Reward'
                                 )
                             ),
                             m('.table-col.w-col.w-col-9',
@@ -207,19 +207,19 @@ const surveys = {
                                         m('.w-row', [
                                             m('.w-col.w-col-6',
                                                 m('div',
-                                                    'Enviados'
+                                                    'Sent'
                                                 )
                                             ),
                                             m('.w-col.w-col-6',
                                                 m('div',
-                                                    'Respondidos'
+                                                    'Answered'
                                                 )
                                             )
                                         ])
                                     ),
                                     m('.u-text-center-big-only.w-col.w-col-5.w-col-small-5.w-col-tiny-5',
                                         m('div',
-                                            'Resultados'
+                                            'Results'
                                         )
                                     ),
                                     m('.w-clearfix.w-col.w-col-3.w-col-small-3.w-col-tiny-3',
@@ -232,7 +232,7 @@ const surveys = {
                             (_.map(ctrl.rewardVM.rewards(), reward => m('.table-row.w-row', [
                                 m('.table-col.w-col.w-col-3', [
                                     m('.fontsize-base.fontweight-semibold',
-                                        `R$ ${reward.minimum_value} ou mais`
+                                        `$ ${reward.minimum_value} or more`
                                     ),
                                     m('.fontsize-smallest.fontweight-semibold',
                                         reward.title
@@ -242,14 +242,14 @@ const surveys = {
                                     ),
                                     m('.fontcolor-secondary.fontsize-smallest', [
                                         m('span.fontcolor-terciary',
-                                            'Entrega prevista:'
+                                            'Expected delivery:'
                                         ),
                                         m.trust('&nbsp;'),
                                         h.momentify(reward.deliver_at, 'MMMM/YYYY')
                                     ]),
                                     m('.fontcolor-secondary.fontsize-smallest', [
                                         m('span.fontcolor-terciary',
-                                            'Envio:'
+                                            'Send:'
                                         ),
                                         m.trust('&nbsp;'),
                                         window.I18n.t(`shipping_options.${reward.shipping_options}`, I18nScope())

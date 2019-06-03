@@ -29,12 +29,12 @@ const adminContributions = {
             }, { // delivery_status
                 component: filterDropdown,
                 data: {
-                    label: 'Status da entrega',
+                    label: 'Delivery status',
                     name: 'delivery_status',
                     vm: filterVM.delivery_status,
                     options: [{
                         value: '',
-                        option: 'Qualquer um'
+                        option: 'Anyone'
                     }, {
                         value: 'delivered',
                         option: 'delivered'
@@ -52,12 +52,12 @@ const adminContributions = {
             }, { // state
                 component: filterDropdown,
                 data: {
-                    label: 'Com o estado',
+                    label: 'With the status',
                     name: 'state',
                     vm: filterVM.state,
                     options: [{
                         value: '',
-                        option: 'Qualquer um'
+                        option: 'Anyone'
                     }, {
                         value: 'paid',
                         option: 'paid'
@@ -89,7 +89,7 @@ const adminContributions = {
                     vm: filterVM.gateway,
                     options: [{
                         value: '',
-                        option: 'Qualquer um'
+                        option: 'Anyone'
                     }, {
                         value: 'Pagarme',
                         option: 'Pagarme'
@@ -101,20 +101,20 @@ const adminContributions = {
                         option: 'PayPal'
                     }, {
                         value: 'Credits',
-                        option: 'Créditos'
+                        option: 'Credits'
                     }]
                 }
             }, { // value
                 component: filterNumberRange,
                 data: {
-                    label: 'Valores entre',
+                    label: 'Values between',
                     first: filterVM.value.gte,
                     last: filterVM.value.lte
                 }
             }, { // created_at
                 component: filterDateRange,
                 data: {
-                    label: 'Período do apoio',
+                    label: 'Support period',
                     first: filterVM.created_at.gte,
                     last: filterVM.created_at.lte
                 }
@@ -150,9 +150,9 @@ const adminContributions = {
                             m('.modal-dialog-content', [
                                 m('.w-row.fontweight-semibold', [
                                     m('.w-col.w-col-3', 'ID do gateway'),
-                                    m('.w-col.w-col-4', 'Nome do apoiador'),
-                                    m('.w-col.w-col-2', 'Valor'),
-                                    m('.w-col.w-col-3', 'Projeto'),
+                                    m('.w-col.w-col-4', "Supporter's name"),
+                                    m('.w-col.w-col-2', 'Value'),
+                                    m('.w-col.w-col-3', 'Project'),
                                 ]),
                                 _.map(toChargebackCollection(), (item, index) => m('.divider.fontsize-smallest.lineheight-looser', [
                                     m('.w-row', [
@@ -172,7 +172,7 @@ const adminContributions = {
                                 ])),
                                 m('.w-row.fontweight-semibold.divider', [
                                     m('.w-col.w-col-6', 'Total'),
-                                    m('.w-col.w-col-3', `R$ ${h.formatNumber(_.reduce(toChargebackCollection(), (t, i) => t + i.value, 0), 2, 3)}`)
+                                    m('.w-col.w-col-3', `$ ${h.formatNumber(_.reduce(toChargebackCollection(), (t, i) => t + i.value, 0), 2, 3)}`)
                                 ]),
                                 m('.w-row.u-margintop-40', [
                                     m('.w-col.w-col-1'),
@@ -184,7 +184,7 @@ const adminContributions = {
                                     m('.w-col.w-col-5',
                                         m('a.btn.btn-medium.btn-terciary.w-button', {
                                             onclick: args.displayModal.toggle
-                                        }, 'Voltar')
+                                        }, 'Come Back')
                                     ),
                                     m('.w-col.w-col-1')
                                 ])
@@ -237,9 +237,9 @@ const adminContributions = {
                                 (processChargebacksLoader()
                                     ? h.loader()
                                     : m('form', {onsubmit: searchToChargebackPayments }, [
-                                        m('label.fontsize-small', 'Insira os IDs do gateway separados por vírgula'),
+                                        m('label.fontsize-small', 'Enter the gateway IDs separated by commas'),
                                         m('textarea.text-field.w-input', { oninput: m.withAttr('value', chargebackIds) }),
-                                        m('button.btn.btn-small.w-button', 'Virar apoios para chargeback')
+                                        m('button.btn.btn-small.w-button', 'Flip backs for chargeback')
                                     ])
                                 )
                             ])
@@ -271,8 +271,8 @@ const adminContributions = {
             (ctrl.displayChargebackConfirmationModal() ? m(modalBox, {
                 displayModal: ctrl.displayChargebackConfirmationModal,
                 content: ctrl.chargebackConfirmationModalContentWrapper({
-                    modalTitle: 'Aprovar chargebacks',
-                    ctaText: 'Aprovar',
+                    modalTitle: 'Approve chargebacks',
+                    ctaText: 'Approve',
                     displayModal: ctrl.displayChargebackConfirmationModal,
                     onClickCallback: ctrl.processChargebacks
                 })

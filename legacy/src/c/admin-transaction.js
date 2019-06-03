@@ -7,9 +7,9 @@ const adminTransaction = {
         return m('.w-col.w-col-4', [
             m('.fontweight-semibold.fontsize-smaller.lineheight-tighter.u-marginbottom-20', 'Detalhes do apoio'),
             m('.fontsize-smallest.lineheight-looser', [
-                `Valor: R$${h.formatNumber(contribution.value, 2, 3)}`,
+                `Valor: $${h.formatNumber(contribution.value, 2, 3)}`,
                 m('br'),
-                `Taxa: R$${h.formatNumber(contribution.gateway_fee, 2, 3)}`,
+                `Taxa: $${h.formatNumber(contribution.gateway_fee, 2, 3)}`,
                 m('br'),
                 `Aguardando Confirmação: ${contribution.waiting_payment ? 'Sim' : 'Não'}`,
                 m('br'),

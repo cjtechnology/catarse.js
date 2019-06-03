@@ -123,7 +123,7 @@ const projectReport = {
                     {
                         onclick: ctrl.checkLogin
                     },
-                          'Denunciar este projeto ao Catarse'
+                          'Report this project'
                         ),
                 ctrl.displayForm() ?
                             m('div', [

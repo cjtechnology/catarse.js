@@ -57,7 +57,7 @@ const insights = {
     view: function(ctrl, args) {
         const project = _.first(ctrl.projectDetails()) || {
                 user: {
-                    name: 'Realizador'
+                    name: 'Director'
                 }
             },
             subscribersDetails = ctrl.subscribersDetails() || {
@@ -67,7 +67,7 @@ const insights = {
             };
 
         if (!ctrl.l()) {
-            project.user.name = project.user.name || 'Realizador';
+            project.user.name = project.user.name || 'Director';
         }
 
         return m('.project-insights', ctrl.isProjectNotLoader() ? h.loader() : (

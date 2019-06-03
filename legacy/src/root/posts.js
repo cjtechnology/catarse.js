@@ -269,9 +269,9 @@ const posts = {
                                         m('span.fa.fa-lightbulb-o',
                                             ''
                                         ),
-                                        ' Veja ótimo motivos para ',
+                                        ' Here are some great reasons to ',
                                         m('a.alt-link[href=\'https://catarse.attach.io/B1AHAGm1x\'][target=\'_blank\']',
-                                            'falar com seus apoiadores agora mesmo!'
+                                            'talk to your supporters right now!'
                                         )
                                     ])
                                 )
@@ -279,7 +279,7 @@ const posts = {
                             m('.card.card-terciary.medium.u-marginbottom-80.w-form', [
                                 m('form', [
                                     m('label.field-label.fontweight-semibold',
-                                        'Destinatários'
+                                        'Recipients'
                                     ),
 
 
@@ -346,7 +346,7 @@ const posts = {
                                     //////////// END DESTINATIONS
 
                                     m('label.field-label.fontweight-semibold',
-                                        'Título'
+                                        'Title'
                                     ),
                                     m('input.positive.text-field.w-input[id=\'post_title\'][maxlength=\'256\'][type=\'text\']', {
                                         name: 'posts[title]',
@@ -359,7 +359,7 @@ const posts = {
                                         onchange: m.withAttr('value', ctrl.fields.title)
                                     }),
                                     m('label.field-label.fontweight-semibold',
-                                        'Texto'
+                                        'Text'
                                     ),
                                     m('.preview-container.u-marginbottom-40', {
                                         class: ctrl.commentHasError() ? 'error' : '',
@@ -382,23 +382,23 @@ const posts = {
                                 ])
                             ]),
                             m('.fontsize-large.fontweight-semibold.u-marginbottom-40',
-                                'Novidades já enviadas'
+                                'News already sent'
                             ),
                             m('.table-outer.u-marginbottom-60', [
                                 m('.fontsize-smaller.fontweight-semibold.header.table-row.w-row', [
                                     m('.table-col.w-col.w-col-5',
                                         m('div',
-                                            'Título'
+                                            'Title'
                                         )
                                     ),
                                     m('.table-col.u-text-center.w-col.w-col-3',
                                         m('div',
-                                            'Enviadas'
+                                            'Sent'
                                         )
                                     ),
                                     m('.table-col.u-text-center.w-col.w-col-3',
                                         m('div',
-                                            'Abertas'
+                                            'Open'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-1')

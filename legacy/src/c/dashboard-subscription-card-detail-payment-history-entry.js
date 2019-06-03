@@ -49,7 +49,7 @@ const dashboardSubscriptionCardDetailPaymentHistoryEntry = {
                     m('div',
                         [
                             m(`span.fa.fa-circle${ctrl.statusClass[paymentStatus]}`, m.trust('&nbsp;')),
-                            `R$${paymentAmount / 100} ${paymentStatusText} - ${captalize(paymentMethodText)} ${paymentMethodEndText}`
+                            `$${paymentAmount / 100} ${paymentStatusText} - ${captalize(paymentMethodText)} ${paymentMethodEndText}`
                         ]
                     )
                 )

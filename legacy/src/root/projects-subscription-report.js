@@ -60,11 +60,11 @@ const projectSubscriptionReport = {
                 component: filterText,
                 label: 'text_filter',
                 data: {
-                    label: 'Nome ou email',
+                    label: 'Name or Email',
                     vm: filterVM.search_index,
                     onchange: submit,
                     wrapper_class: '.u-marginbottom-20.w-col.w-col-3',
-                    placeholder: 'Busque por assinantes',
+                    placeholder: 'Search by subscribers',
                     onclick: submit
                 }
             },
@@ -82,27 +82,27 @@ const projectSubscriptionReport = {
                     wrapper_class: '.w-col.w-col-3',
                     options: [{
                         value: '',
-                        option: 'Todos'
+                        option: 'All'
                     },
                     {
                         value: 'active',
-                        option: 'Ativa'
+                        option: 'Active'
                     },
                     {
                         value: 'started',
-                        option: 'Iniciada'
+                        option: 'Started'
                     },
                     {
                         value: 'canceling',
-                        option: 'Cancelamento solicitado'
+                        option: 'Cancellation requested'
                     },
                     {
                         value: 'canceled',
-                        option: 'Cancelada'
+                        option: 'Canceled'
                     },
                     {
                         value: 'inactive',
-                        option: 'Inativa'
+                        option: 'Inactive'
                     }
                     ]
                 }
@@ -296,7 +296,7 @@ const projectSubscriptionReport = {
                             m('.w-col.w-col-3'),
                             m('.w-col.w-col-6',
                                 m('.fontsize-larger.fontweight-semibold.lineheight-looser.u-marginbottom-30.u-text-center',
-                                    'Base de assinantes'
+                                    'Subscriber Base'
                                 )
                             ),
                             m('.w-col.w-col-3')
@@ -333,7 +333,7 @@ const projectSubscriptionReport = {
                                         m('span.fontweight-semibold',
                                             ctrl.subscriptions.total()
                                         ),
-                                        ' pessoas',
+                                        ' people',
                                         m.trust('&nbsp;')
                                     ])
                                 ),
@@ -344,7 +344,7 @@ const projectSubscriptionReport = {
                                             m('span.fa.fa-download',
                                                 m.trust('&nbsp;')
                                             ),
-                                            'Baixar relatórios'
+                                            'Download reports'
                                         ])
                                 )
                             ])
@@ -354,32 +354,32 @@ const projectSubscriptionReport = {
                                 m('.w-row', [
                                     m('.table-col.w-col.w-col-3',
                                         m('div',
-                                            'Assinante'
+                                            'Subscriber'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-2',
                                         m('div',
-                                            'Recompensa'
+                                            'Reward'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-1.u-text-center',
                                         m('div',
-                                            'Apoio mensal'
+                                            'Monthly support'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-2.u-text-center',
                                         m('div',
-                                            'Total apoiado'
+                                            'Total supported'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-2.u-text-center',
                                         m('div',
-                                            'Última cobrança'
+                                            'Last charge'
                                         )
                                     ),
                                     m('.table-col.w-col.w-col-2.u-text-center',
                                         m('div',
-                                            'Status da Assinatura'
+                                            'Signature Status'
                                         )
                                     )
                                 ])

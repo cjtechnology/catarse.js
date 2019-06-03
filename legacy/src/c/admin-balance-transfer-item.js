@@ -32,7 +32,7 @@ const adminBalanceTransferItem = {
                   `USER_ID: ${item.user_id}`)
             ]),
             m('.w-col.w-col-2', [
-                m('span.fontsize-small', `R$ ${h.formatNumber(item.amount, 2, 3)}`)
+                m('span.fontsize-small', `$ ${h.formatNumber(item.amount, 2, 3)}`)
             ]),
             m('.w-col.w-col-2.w-hidden-small.w-hidden-tiny', [
                 m('span', item.state),

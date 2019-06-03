@@ -17,6 +17,7 @@ const projectHighlight = {
         const project = args.project;
         const isSub = projectVM.isSubscription(project);
 
+
         return m('#project-highlight', [
             (project().video_embed_url ? m('.w-embed.w-video.project-video', {
                 style: 'min-height: 240px;'
@@ -33,7 +34,7 @@ const projectHighlight = {
             m('.project-share.w-hidden-small.w-hidden-tiny',
                 m('.u-marginbottom-30.u-text-center-small-only', [
                     m('.w-inline-block.fontcolor-secondary.fontsize-smaller.u-marginright-20',
-                        'Compartilhar:'
+                        'Share:'
                     ),
                     project().permalink ? m.component(facebookButton, {
                         class: isSub ? 'btn-terciary-negative' : null,
@@ -52,7 +53,7 @@ const projectHighlight = {
                         onclick: ctrl.displayShareBox.toggle
                     }, [
                         '···',
-                        ' Mais'
+                        ' More'
                     ]),
                     (ctrl.displayShareBox() ? m(projectShareBox, {
                         project,

@@ -25,7 +25,7 @@ const quickProjectList = {
                       [
                           m('.w-col.w-col-6',
                               m(`a.btn.btn-terciary[href=${args.loadMoreHref}?ref=ctrse_search_quick]`,
-                                  'Ver todos'
+                                  `${window.I18n.t('projects.index.see_all')}`
                               )
                           ),
                           m('.w-col.w-col-6')

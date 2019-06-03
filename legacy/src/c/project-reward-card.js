@@ -45,7 +45,7 @@ const projectRewardCard = {
             if (!selectedDestination() && rewardVM.hasShippingOptions(vm.selectedReward())) {
                 vm.error('Por favor, selecione uma opção de frete válida.');
             } else if (valueFloat < vm.selectedReward().minimum_value + shippingFee.value) {
-                vm.error(`O valor de apoio para essa recompensa deve ser de no mínimo R$${vm.selectedReward().minimum_value} ${projectVM.isSubscription(projectVM.currentProject()) ? '' : `+ frete R$${h.formatNumber(shippingFee.value, 2, 3)}`} `);
+                vm.error(`O valor de apoio para essa recompensa deve ser de no mínimo $${vm.selectedReward().minimum_value} ${projectVM.isSubscription(projectVM.currentProject()) ? '' : `+ frete $${h.formatNumber(shippingFee.value, 2, 3)}`} `);
             } else {
                 vm.error('');
                 
@@ -117,7 +117,7 @@ const projectRewardCard = {
             config: ctrl.isRewardOpened(reward) ? h.scrollTo() : Function.prototype
         }, [
             m('.u-marginbottom-20', [
-                m('.fontsize-base.fontweight-semibold', `R$ ${h.formatNumber(reward.minimum_value)} ou mais${isSub ? ' por mês' : ''}`)
+                m('.fontsize-base.fontweight-semibold', `$ ${h.formatNumber(reward.minimum_value)} ou mais${isSub ? ' por mês' : ''}`)
             ]),
             m('.fontsize-smaller.fontweight-semibold',
               reward.title
@@ -196,7 +196,7 @@ const projectRewardCard = {
                                               { selected: option.value === ctrl.selectedDestination(), value: option.value },
                                       [
                                           `${option.name} `,
-                                          option.value != '' ? `+R$${h.formatNumber(option.fee, 2, 3)}` : null
+                                          option.value != '' ? `+$${h.formatNumber(option.fee, 2, 3)}` : null
                                       ]
                                              )
                               )
@@ -207,7 +207,7 @@ const projectRewardCard = {
                          ),
                         m('.w-row.u-marginbottom-20', [
                             m('.w-col.w-col-3.w-col-small-3.w-col-tiny-3',
-                              m('.back-reward-input-reward.placeholder', 'R$')
+                              m('.back-reward-input-reward.placeholder', '$')
                              ),
                             m('.w-col.w-col-9.w-col-small-9.w-col-tiny-9',
                               m('input.w-input.back-reward-input-reward[type="tel"]', {

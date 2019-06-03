@@ -34,7 +34,7 @@ const projectReportInfringesIntellectualProperty = {
                           !detailsError() &&
                           !termsAgreedError()
                      ) {
-                    args.reason('Este projeto infringe propriedade intelectual');
+                    args.reason('This project infringes intellectual property');
                     return true;
                 }
                 return false;
@@ -71,11 +71,11 @@ const projectReportInfringesIntellectualProperty = {
                      }),
 							                     m('label.fontsize-small.fontweight-semibold.w-form-label', {
                          onclick: () => args.displayFormWithName(ctrl.formName)
-                     }, 'Este projeto infringe propriedade intelectual')
+                     }, 'This project infringes intellectual property')
 						                   ]
 					                    ),
 					                   m('.fontsize-smaller.fontcolor-secondary',
-						                   'O projeto está infringindo de algum modo seus direitos de propriedade intelectual.'
+						                   'The project is in some way infringing your intellectual property rights.'
 					                    ),
 					                   m('.u-margintop-30', {
                        style: {
@@ -86,49 +86,49 @@ const projectReportInfringesIntellectualProperty = {
 							                     m('.u-marginbottom-30',
 								                     [
 									                       m('.fontsize-smaller.fontweight-semibold.u-marginbottom-10',
-										                       'Sua relação com a propriedade que está sendo violada *'
+										                       'Your relationship to the property being violated *'
 									                        ),
 									                       m('.fontsize-smaller.fontcolor-secondary.u-marginbottom-10.card.u-radius.card-message',
 										                       [
 											                         m('span.fontweight-bold',
 												                         'Importante:'
 											                          ),
-											                         'A denúncia deve ser realizada pela',
+											                         'The complaint shall be made by the',
 											                         m.trust('&nbsp;'),
-											                         'pessoa, empresa ou responsável legal',
+											                         'person, company or legal guardian',
 											                         m.trust('&nbsp;'),
-											                         'pelo direito envolvido. Caso não seja esse o seu caso, notifique diretamente o responsável pela propriedade que você acredita estar sendo violada.'
+											                         'by the right involved. If this is not the case, please notify the owner of the property that you believe is being violated.'
 										                       ]
 									                        ),
 									                       m('.u-marginbottom-10.w-radio',
 										                       [
 											                         m('input.w-radio-input[type=\'radio\']', {
-                             value: 'Sou dono dos direitos',
-                             checked: args.relationWithViolatedProperty() === 'Sou dono dos direitos',
+                             value: 'I own the rights',
+                             checked: args.relationWithViolatedProperty() === 'I own the rights',
                              onchange: m.withAttr('value', args.relationWithViolatedProperty)
                          }),
 											                         m('label.fontsize-smaller.w-form-label', {
-                             onclick: () => args.relationWithViolatedProperty('Sou dono dos direitos')
-                         }, 'Sou dono dos direitos')
+                             onclick: () => args.relationWithViolatedProperty('I own the rights')
+                         }, 'I own the rights')
 										                       ]
 									                        ),
 									                       m('.u-marginbottom-10.w-radio',
 										                       [
 											                         m('input.w-radio-input[type=\'radio\']', {
-                             value: 'Sou representante do dono dos direitos',
-                             checked: args.relationWithViolatedProperty() === 'Sou representante do dono dos direitos',
+                             value: 'I represent the rights holder.',
+                             checked: args.relationWithViolatedProperty() === 'I represent the rights holder.',
                              onchange: m.withAttr('value', args.relationWithViolatedProperty)
                          }),
 											                         m('label.fontsize-smaller.w-form-label', {
-                             onclick: () => args.relationWithViolatedProperty('Sou representante do dono dos direitos')
+                             onclick: () => args.relationWithViolatedProperty('I represent the rights holder.')
                          }, 'Sou representante do dono dos direitos')
 										                       ]
 									                        ),
-                             assertError(ctrl.relationWithViolatedPropertyError(), 'Indique sua relação com a propriedade violada')
+                             assertError(ctrl.relationWithViolatedPropertyError(), 'Indicate your relationship to the violated property')
 								                     ]
 							                      ),
 							                     m('.fontsize-smaller.fontweight-semibold',
-								                     'Nome completo *'
+								                     'Full name *'
 							                      ),
 							                     m('input.text-field.positive.w-input[maxlength=\'256\'][type=\'text\']', {
                          onchange: m.withAttr('value', args.fullName),
@@ -166,7 +166,7 @@ const projectReportInfringesIntellectualProperty = {
 									                       m('._w-sub-col.w-col.w-col-6',
 										                       [
 											                         m('.fontsize-smaller.fontweight-semibold',
-												                         'Nome da empresa (caso aplicável)'
+												                         'Company name (if applicable)'
 											                          ),
 											                         m('input.text-field.positive.w-input[maxlength=\'256\'][type=\'text\']', {
                              onchange: m.withAttr('value', args.businessName)
@@ -176,7 +176,7 @@ const projectReportInfringesIntellectualProperty = {
 									                       m('.w-col.w-col-6',
 										                       [
 											                         m('.fontsize-smaller.fontweight-semibold',
-												                         'CNPJ (caso aplicável)'
+												                         'CNPJ (if applicable)'
 											                          ),
 											                         m('input.text-field.positive.w-input[maxlength=\'256\'][type=\'text\']', {
                              onchange: m.withAttr('value', args.CNPJ)
@@ -190,7 +190,7 @@ const projectReportInfringesIntellectualProperty = {
 									                       m('._w-sub-col.w-col.w-col-6',
 										                       [
 											                         m('.fontsize-smaller.fontweight-semibold',
-												                         'Cargo (caso aplicável)'
+												                         'Position (if applicable)'
 											                          ),
 											                         m('input.text-field.positive.w-input[maxlength=\'256\'][type=\'text\']', {
                              onchange: m.withAttr('value', args.businessRole)
@@ -201,7 +201,7 @@ const projectReportInfringesIntellectualProperty = {
 								                     ]
 							                      ),
 							                     m('.fontsize-smaller.fontweight-semibold',
-								                     'Endereço completo *'
+								                     'Full address *'
 							                      ),
 							                     m('input.text-field.positive.w-input[maxlength=\'256\'][type=\'text\']', {
                          onchange: m.withAttr('value', args.fullAddress),
@@ -211,7 +211,7 @@ const projectReportInfringesIntellectualProperty = {
                      }),
                            assertError(ctrl.fullAddressError(), 'Informe seu endereço completo'),
 							                     m('.fontsize-smaller.fontweight-semibold',
-								                     'Este projeto está infringindo *'
+								                     'This project is infringing *'
 							                      ),
 							                     m('select.text-field.positive.w-select', {
                          onchange: m.withAttr('value', args.projectInfringes),
@@ -221,25 +221,25 @@ const projectReportInfringesIntellectualProperty = {
                      },
 								                     [
 									                       m('option[value=\'\']',
-										                       'Selecione uma opção'
+										                       'Select an option'
 									                        ),
 									                       m('option[value=\'Marcas\']',
-										                       'Marcas'
+										                       'Brands'
 									                        ),
 									                       m('option[value=\'Patentes\']',
-										                       'Patentes'
+										                       'Patents'
 									                        ),
 									                       m('option[value=\'Desenho Industrial\']',
-										                       'Desenho Industrial'
+										                       'Industrial draw'
 									                        ),
 									                       m('option[value=\'Direitos autorais\']',
-										                       'Direitos autorais'
+										                       'Copyright'
 									                        ),
 									                       m('option[value=\'Direitos de software\']',
-										                       'Direitos de software'
+										                       'Software rights'
 									                        ),
 									                       m('option[value=\'Modelo industrial\']',
-										                       'Modelo industrial'
+										                       'Industrial model'
 									                        )
 								                     ]
 							                      ),
@@ -247,16 +247,16 @@ const projectReportInfringesIntellectualProperty = {
 							                     m('.u-marginbottom-30',
 								                     [
 									                       m('.fontsize-smaller.fontweight-semibold',
-										                       'Detalhes da denúncia *'
+										                       'Details of the complaint *'
 									                        ),
 									                       m('textarea.text-field.positive.w-input[maxlength=\'5000\']', {
                            onchange: m.withAttr('value', args.details),
-                           placeholder: 'Por favor, dê mais detalhes que nos ajudem a identificar o problema',
+                           placeholder: 'Please give more details to help us identify the problem',
                            class: {
                                error: ctrl.detailsError()
                            }
                        }),
-                             assertError(ctrl.detailsError(), 'Informe os detalhes da denúncia')
+                             assertError(ctrl.detailsError(), 'Please report the complaint details')
 								                     ]
 							                      ),
                                    /*
@@ -280,11 +280,11 @@ const projectReportInfringesIntellectualProperty = {
                              checked: args.termsAgreed()
                          }),
 											                         m('label.fontsize-smaller.w-form-label[for=\'checkbox\']',
-												                         'Asseguro, com a consciência de que o envio de denúncias com conteúdo enganoso pode ser punível por lei, que as informações que forneço aqui são verdadeiras.'
+												                         'I assure you, with the knowledge that sending complaints with misleading content may be punishable by law, that the information I provide here is true.'
 											                          )
 										                       ]
 									                        ),
-                             assertError(ctrl.termsAgreedError(), 'Confirme o campo acima para enviar a denúncia')
+                             assertError(ctrl.termsAgreedError(), 'Please confirm the field above to send the report')
 								                     ]
 							                      ),
 							                     m('input.btn.btn-medium.btn-inline.btn-dark.w-button[type=\'submit\'][value=\'Enviar denúncia\']', {

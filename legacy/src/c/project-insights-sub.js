@@ -104,10 +104,10 @@ const projectInsightsSub = {
             m('.dashboard-header.section-one-column', [
                 m('.u-marginbottom-30.u-text-center', [
                     m('.fontsize-larger.fontweight-semibold',
-                        `Olá, ${project.user.public_name || project.user.name}!`
+                        `Hello, ${project.user.public_name || project.user.name}!`
                     ),
                     m('.fontsize-smaller',
-                        `Este é o retrato de sua campanha hoje, ${moment().format('DD [de] MMMM [de] YYYY')}`
+                        `This is the picture of your campaign today, ${moment().format('DD [de] MMMM [de] YYYY')}`
                     )
                 ]),
                 m('.w-container', [
@@ -119,7 +119,7 @@ const projectInsightsSub = {
                         }) : '',
                         m('.card.card-terciary.flex-column.u-marginbottom-10.u-radius', [
                             m('.fontsize-small.u-marginbottom-10',
-                                'Assinantes ativos'
+                                'Active Subscribers'
                             ),
                             m('.fontsize-largest.fontweight-semibold',
                                 subscribersDetails.total_subscriptions
@@ -127,26 +127,26 @@ const projectInsightsSub = {
                         ]),
                         m('.card.card-terciary.flex-column.u-marginbottom-10.u-radius', [
                             m('.fontsize-small.u-marginbottom-10',
-                                'Receita Mensal'
+                                'Monthly Income'
                             ),
                             m('.fontsize-largest.fontweight-semibold',
-                                `R$${h.formatNumber(subscribersDetails.amount_paid_for_valid_period, 2, 3)}`
+                                `$${h.formatNumber(subscribersDetails.amount_paid_for_valid_period, 2, 3)}`
                             )
                         ]),
                         m('.card.flex-column.u-marginbottom-10.u-radius', [
                             m('.fontsize-small.u-marginbottom-10', [
-                                'Saldo',
+                                'Balance',
                                 m.trust('&nbsp;'),
                                 ' ',
                                 m(`a.btn-inline.btn-terciary.fontsize-smallest.u-radius[href='/users/${project.user_id}/edit#balance'][target='_self']`,
-                                    'Sacar'
+                                    'To withdraw'
                                 )
                             ]),
                             m('.fontsize-largest.fontweight-semibold.text-success.u-marginbottom-10',
                                 (balanceData && balanceData.amount ? `R$${h.formatNumber(balanceData.amount, 2, 3)}` : '')
                             ),
                             m('.fontsize-mini.fontcolor-secondary.lineheight-tighter',
-                                'O saldo demora até 20 mins após o pagamento para ser atualizado.'
+                                'The balance takes up to 20 mins after payment to be updated.'
                             )
                         ])
                     ]),
@@ -158,13 +158,13 @@ const projectInsightsSub = {
                         m('.flex-row.u-marginbottom-40.u-text-center-small-only', [
                             m('.flex-column.card.u-radius.u-marginbottom-10', [
                                 m('div',
-                                    'Receita média por assinante'
+                                    'Average revenue per subscriber'
                                 ),
                                 m('.fontsize-smallest.fontcolor-secondary.lineheight-tighter',
-                                    `em ${moment().format('DD/MM/YYYY')}`
+                                    `in ${moment().format('DD/MM/YYYY')}`
                                 ),
                                 m('.fontsize-largest.fontweight-semibold',
-                                    `R$${averageRevenue ? `${h.formatNumber(averageRevenue, 2, 3)}` : '--'}`
+                                    `$${averageRevenue ? `${h.formatNumber(averageRevenue, 2, 3)}` : '--'}`
                                 )
 
                             ]),

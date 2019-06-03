@@ -24,7 +24,7 @@ const projectRowWithHeader = {
                             m('.w-col.w-col-4', [
                                 m(`a.btn.btn-small.btn-terciary.btn-inline.u-right-big-only[href="/explore?ref=${ref}&filter=${collection.hash}"]`, 
                                     { config: m.route },
-                                    'Ver todos'
+                                    `${window.I18n.t('projects.index.see_all')}`
                                 ),
                                 (showFriends ? 
                                     m(`a.btn.btn-small.btn-terciary.btn-inline.u-right-big-only.btn-no-border[href="/connect-facebook?ref=${ref}"]`,  

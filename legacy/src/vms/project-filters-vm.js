@@ -132,7 +132,7 @@ const projectFiltersVM = () => {
                 filter: notSub,
                 isContextual: false,
                 keyName: 'not_sub',
-                header_badges: ['badge-aon-h-margin', 'badge-flex-h-margin']
+                header_badges: []
             },
             all_modes: {
                 title: window.I18n.t("projects.explore.all_projects"),

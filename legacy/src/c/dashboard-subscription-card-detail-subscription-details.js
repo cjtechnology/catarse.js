@@ -33,12 +33,12 @@ const dashboardSubscriptionCardDetailSubscriptionDetails = {
                     m('span.fontcolor-secondary',
                         'Valor da assinatura: '
                     ),
-                    `R$${subscription.amount / 100}`
+                    `$${subscription.amount / 100}`
                 ]),
                 m('div', [
                     m('span.fontcolor-secondary',
                         'Recompensa: '
-                    ), !_.isEmpty(reward) ? `R$${reward.minimum_value} - ${reward.title} - ${reward.description.substring(0, 90)}(...)` : 'Sem recompensa'
+                    ), !_.isEmpty(reward) ? `$${reward.minimum_value} - ${reward.title} - ${reward.description.substring(0, 90)}(...)` : 'Sem recompensa'
                 ]),
                 m('div', [
                     m('span.fontcolor-secondary',

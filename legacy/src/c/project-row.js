@@ -26,7 +26,7 @@ const projectRow = {
                                 m((showFriends ? '.w-col.w-col-6' : '.w-col.w-col-12'),
                                     m(`a.btn.btn-small.btn-terciary[href="/explore?ref=${ref}&filter=${collection.hash}"]`, {
                                         config: m.route
-                                    }, 'Ver todos'))
+                                    }, `${window.I18n.t('projects.index.see_all')}`))
                             ])
                         ])
                     ]) : '',

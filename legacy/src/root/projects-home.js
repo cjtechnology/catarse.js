@@ -61,7 +61,7 @@ const projectsHome = {
                     sliderTime: 10000
                 }),
                 m(projectsDisplay),
-                (!ctrl.hasFBAuth ? m.component(UnsignedFriendFacebookConnect, { largeBg: true }) : ''),
+                (false ? m.component(UnsignedFriendFacebookConnect, { largeBg: true }) : ''),
                 m.component(blogBanner)
             ]
         );

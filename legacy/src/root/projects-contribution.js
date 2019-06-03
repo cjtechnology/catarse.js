@@ -59,7 +59,7 @@ const projectsContribution = {
                             m('.fontweight-semibold.lineheight-tight.text-success.fontsize-large.u-text-center-small-only', [
                                 'Escolha a recompensa e o valor do apoio',
                                 m.trust('&nbsp;'),
-                                m('span.fontsize-small.badge.badge-success', '(parcele em até 6x)')
+                                m('span.fontsize-small.badge.badge-success', '(Join in until 6x)')
                             ])
                         )
                 ),

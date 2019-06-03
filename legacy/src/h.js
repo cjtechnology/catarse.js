@@ -190,13 +190,13 @@ const
                     _.map(fields, (field) => {
                         if (field.rule === 'email') {
                             if (!validateEmail(field.prop())) {
-                                validationErrors().push({ field: field.prop, message: 'E-mail inválido.' });
+                                validationErrors().push({ field: field.prop, message: 'Invalid email.' });
                             }
                         }
 
                         if (field.rule === 'text') {
                             if (field.prop().trim() === '') {
-                                validationErrors().push({ field: field.prop, message: 'O campo não pode ser vazio.' });
+                                validationErrors().push({ field: field.prop, message: 'Field can not be empty.' });
                             }
                         }
                     });
@@ -216,10 +216,10 @@ const
     },
 
     translatedTimeUnits = {
-        days: 'dias',
-        minutes: 'minutos',
-        hours: 'horas',
-        seconds: 'segundos'
+        days: 'days',
+        minutes: 'minutes',
+        hours: 'hours',
+        seconds: 'seconds'
     },
     // Object manipulation helpers
     translatedTime = (time) => {
@@ -552,42 +552,42 @@ const
         const statusText = {
             online: {
                 cssClass: 'text-success',
-                text: 'NO AR'
+                text: 'UP IN THE AIR'
             },
             successful: {
                 cssClass: 'text-success',
-                text: 'FINANCIADO'
+                text: 'FINANCED'
             },
             failed: {
                 cssClass: 'text-error',
-                text: 'NÃO FINANCIADO'
+                text: 'NOT FINANCED'
             },
             waiting_funds: {
                 cssClass: 'text-waiting',
-                text: 'AGUARDANDO'
+                text: 'WAITING FOR'
             },
             rejected: {
                 cssClass: 'text-error',
-                text: 'CANCELADO'
+                text: 'CANCELED'
             },
             draft: {
                 cssClass: '',
-                text: 'RASCUNHO'
+                text: 'DRAFT'
             },
             in_analysis: {
                 cssClass: '',
-                text: 'EM ANÁLISE'
+                text: 'IN ANALYSIS'
             },
             approved: {
                 cssClass: 'text-success',
-                text: 'APROVADO'
+                text: 'APPROVED'
             }
         };
 
         if (has_cancelation_request) {
             return {
                 cssClass: 'text-error',
-                text: 'AGUARDANDO CANCELAMENTO'
+                text: 'WAITING FOR CANCELLATION'
             };
         }
         return statusText[state];

@@ -313,10 +313,10 @@ const userAboutEdit = {
                                 m('.w-row.u-marginbottom-30.card.card-terciary', [
                                     m('.w-col.w-col-5.w-sub-col', [
                                         m('label.field-label.fontweight-semibold',
-                                            '  Nome no perfil público'
+                                            '  Name in public profile'
                                         ),
                                         m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                            'Esse é o nome que os usuários irão ver no seu perfil.'
+                                            'This is the name that users will see on your profile.'
                                         )
                                     ]),
                                     m('.w-col.w-col-7',
@@ -333,10 +333,10 @@ const userAboutEdit = {
                                     m('.w-row.u-marginbottom-30.card.card-terciary', [
                                         m('.w-col.w-col-5.w-sub-col', [
                                             m('label.field-label.fontweight-semibold',
-                                                '  Imagem do perfil'
+                                                '  Profile picture'
                                             ),
                                             m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                                '  Essa imagem será utilizada como a miniatura de seu perfil (PNG, JPG tamanho 280 x 280)'
+                                                '  This image will be used as your profile thumbnail (PNG, JPG size 280x280)'
                                             )
                                         ]),
                                         m('.w-col.w-col-4.w-sub-col',
@@ -356,10 +356,10 @@ const userAboutEdit = {
                                     (args.hideCoverImg ? '' : m('.w-row.u-marginbottom-30.card.card-terciary', [
                                         m('.w-col.w-col-5.w-sub-col', [
                                             m('label.field-label.fontweight-semibold',
-                                                '  Imagem de capa do perfil'
+                                                '  Profile Cover Image'
                                             ),
                                             m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                                '  Essa imagem será utilizada como fundo do cabeçalho do seu perfil público (PNG ou JPG). Caso você não envie nenhum imagem aqui, utilizaremos sua imagem de perfil como alternativa.'
+                                                '  This image will be used as the background of your public profile header (PNG or JPG). If you do not submit any images here, we will use your profile image as an alternative.'
                                             )
                                         ]),
                                         m('.w-col.w-col-4.w-sub-col',
@@ -381,10 +381,10 @@ const userAboutEdit = {
                                     m('.w-col',
                                         m('.card.card-terciary.u-marginbottom-30', [
                                             m('label.field-label.fontweight-semibold',
-                                                'Sobre'
+                                                'About'
                                             ),
                                             m('label.field-label.fontsize-smallest.fontcolor-secondary.u-marginbottom-20',
-                                                'Fale sobre você e tente fornecer as informações mais relevantes para que visitantes possam te conhecer melhor. '
+                                                'Talk about yourself and try to provide the most relevant information so that visitors can get to know you better. '
                                             ),
                                             m('.w-form',
                                                 m('.preview-container.u-marginbottom-40', {
@@ -399,10 +399,10 @@ const userAboutEdit = {
                                     m('.w-row.u-marginbottom-10', [
                                         m('.w-col.w-col-5.w-sub-col', [
                                             m('label.field-label.fontweight-semibold',
-                                                '  Perfil do facebook'
+                                                '  Facebook profile'
                                             ),
                                             m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                                '  Cole o link do seu perfil'
+                                                '  Paste your profile link'
                                             )
                                         ]),
                                         m('.w-col.w-col-7',
@@ -416,10 +416,10 @@ const userAboutEdit = {
                                     m('.w-row.u-marginbottom-10', [
                                         m('.w-col.w-col-5.w-sub-col', [
                                             m('label.field-label.fontweight-semibold',
-                                                '  Perfil do twitter'
+                                                '  Twitter profile'
                                             ),
                                             m('label.field-label.fontsize-smallest.fontcolor-secondary',
-                                                '  Cole o link do seu perfil'
+                                                '  Paste your profile link'
                                             )
                                         ]),
                                         m('.w-col.w-col-7',
@@ -435,9 +435,9 @@ const userAboutEdit = {
                                     m('.w-row.u-marginbottom-10', [
                                         m('.w-col.w-col-5.w-sub-col', [
                                             m('label.field-label.fontweight-semibold[for="name-8"]',
-                                                ' Presença na internet'
+                                                ' Presence on the internet'
                                             ),
-                                            m('label.field-label.fontsize-smallest.fontcolor-secondary[for="name-8"]', ' Inclua links que ajudem outros usuários a te conhecer melhor. ')
+                                            m('label.field-label.fontsize-smallest.fontcolor-secondary[for="name-8"]', ' Include links to help other users get to know you better. ')
                                         ]),
                                         m('.w-col.w-col-7', [
                                             m('.w-row', [fields.links() && fields.links().length <= 0 ? '' : m('.link', _.map(fields.links(),
@@ -478,7 +478,7 @@ const userAboutEdit = {
                                 (args.hidePasswordChange ? '' : m('.w-form.card.card-terciary.u-marginbottom-30',
                                     m('.w-row.u-marginbottom-10', [
                                         m('.fontsize-base.fontweight-semibold',
-                                            'Alterar minha senha'
+                                            'Change my password'
                                         ),
                                         m('.fontsize-small.u-marginbottom-20',
                                             'Para que a senha seja alterada você precisa confirmar a sua senha atual.'
@@ -486,7 +486,7 @@ const userAboutEdit = {
                                         m('.w-row.u-marginbottom-20', [
                                             m('.w-col.w-col-6.w-sub-col', [
                                                 m('label.field-label.fontweight-semibold',
-                                                    ' Senha atual'
+                                                    ' Current Password'
                                                 ),
                                                 m('input.password.optional.w-input.text-field.w-input.text-field.positive[id=\'user_current_password\'][name=\'user[current_password]\'][type=\'password\']', {
                                                     value: fields.current_password(),
@@ -495,7 +495,7 @@ const userAboutEdit = {
                                             ]),
                                             m('.w-col.w-col-6', [
                                                 m('label.field-label.fontweight-semibold',
-                                                    ' Nova senha'
+                                                    ' New Password'
                                                 ),
                                                 m('input.password.optional.w-input.text-field.w-input.text-field.positive[id=\'user_password\'][name=\'user[password]\'][type=\'password\']', {
                                                     class: ctrl.passwordHasError() ? 'error' : '',
@@ -504,7 +504,7 @@ const userAboutEdit = {
                                                     onblur: ctrl.validatePassword,
                                                     onchange: m.withAttr('value', fields.password)
                                                 }), !ctrl.passwordHasError() ? '' : m(inlineError, {
-                                                    message: 'A sua nova senha deve ter no mínimo 6 caracteres.'
+                                                    message: 'Your new password must be at least 6 characters.'
                                                 })
                                             ])
                                         ]),
@@ -514,15 +514,15 @@ const userAboutEdit = {
                                 (!user.is_admin && (args.hideDisableAcc || user.total_published_projects > 0) ? '' : m('.w-form.card.card-terciary.u-marginbottom-30',
                                     m('.w-row.u-marginbottom-10', [
                                         m('.fontweight-semibold.fontsize-smaller',
-                                            'Desativar minha conta'
+                                            'Disable my account'
                                         ),
                                         m('.fontsize-smallest',
-                                            'Todos os seus apoios serão convertidos em apoios anônimos, seus dados não serão mais visíveis, você sairá automaticamente do sistema e sua conta será desativada permanentemente.'
+                                            'All your support will be converted into anonymous backups, your data will no longer be visible, you will automatically exit the system and your account will be permanently disabled.'
                                         ),
                                         m(`a.alt-link.fontsize-smaller[href='/${window.I18n.locale}/users/${user.id}'][rel='nofollow']`, {
                                             onclick: ctrl.deleteAccount
                                         },
-                                            'Desativar minha conta no Catarse'
+                                            'Disable my RealCapital account'
                                         ),
                                         m('form.w-hidden', {
                                             action: `/${window.I18n.locale}/users/${user.id}`,

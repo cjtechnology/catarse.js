@@ -43,13 +43,13 @@ const projectInsights = {
             }
         };
 
-        const lVisitorsPerDay = catarseMoments.loaderWithToken(models.projectVisitorsPerDay.getRowOptions(filtersVM.parameters()));
+        const lVisitorsPerDay = loader(models.projectVisitorsPerDay.getRowOptions(filtersVM.parameters()));
         lVisitorsPerDay.load().then(processVisitors);
 
         const lContributionsPerDay = loader(models.projectContributionsPerDay.getRowOptions(filtersVM.parameters()));
         lContributionsPerDay.load().then(contributionsPerDay);
 
-        const contributionsPerLocationTable = [['Estado', 'Apoios', 'R$ apoiados (% do total)']];
+        const contributionsPerLocationTable = [['Estado', 'Apoios', '$ apoiados (% do total)']];
         const buildPerLocationTable = contributions => (!_.isEmpty(contributions)) ? _.map(_.first(contributions).source, (contribution) => {
             const column = [];
 
@@ -57,7 +57,7 @@ const projectInsights = {
             column.push(contribution.total_contributions);
             column.push([contribution.total_contributed, [// Adding row with custom comparator => read project-data-table description
                 m(`input[type="hidden"][value="${contribution.total_contributed}"`),
-                'R$ ',
+                '$ ',
                 h.formatNumber(contribution.total_contributed, 2, 3),
                 m('span.w-hidden-small.w-hidden-tiny', ` (${contribution.total_on_percentage.toFixed(2)}%)`)
             ]]);
@@ -118,14 +118,14 @@ const projectInsights = {
             buildTooltip = el => m.component(tooltip, {
                 el,
                 text: [
-                    'Informa de onde vieram os apoios de seu projeto. Saiba como usar essa tabela e planejar melhor suas ações de comunicação ',
-                    m(`a[href="${window.I18n.t('ref_table.help_url', I18nScope())}"][target='_blank']`, 'aqui.')
+                    'Tell us where your project came from. Learn how to use this table and better plan your communication actions ',
+                    m(`a[href="${window.I18n.t('ref_table.help_url', I18nScope())}"][target='_blank']`, 'on here.')
                 ],
                 width: 380
             });
 
         if (!args.l()) {
-            project.user.name = project.user.name || 'Realizador';
+            project.user.name = project.user.name || 'Director';
         }
 
         return m('.project-insights', !args.l() ? [
@@ -152,7 +152,7 @@ const projectInsights = {
                                             project.mode === 'flex' && _.isNull(project.expires_at) && project.state !== 'draft' ? 
                                                 m('span', [
                                                     m.trust(window.I18n.t('finish_explanation', I18nScope())),
-                                                    m('a.alt-link[href="http://suporte.catarse.me/hc/pt-br/articles/213783503-tudo-sobre-Prazo-da-campanha"][target="_blank"]', window.I18n.t('know_more', I18nScope()))
+                                                    m('a.alt-link[href="#"', window.I18n.t('know_more', I18nScope()))
                                                 ]) : 
                                                 m.trust(
                                                     window.I18n.t(`campaign.${project.mode}.${project.state}`, 

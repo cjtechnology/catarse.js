@@ -122,7 +122,7 @@ const subscriptionEditModal = {
                                                         ' Cobrança hoje: '
                                                     ]
                                                 ),
-                                                'Nenhuma'
+                                                'None'
                                             ]
                                         ),
                                         m('.fontsize-smaller.u-marginbottom-10',

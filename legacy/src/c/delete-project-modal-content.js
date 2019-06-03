@@ -26,12 +26,12 @@ const deleteProjectModalContent = {
                     deleteSuccess(true);
                 }).catch((err) => {
                     confirmed(false);
-                    error('Erro ao deletar projeto. Por favor tente novamente.');
+                    error('Error deleting project. Please try again.');
                     m.redraw();
                 });
             } else {
                 confirmed(false);
-                error('Por favor, corrija os seguintes erros: para deletar definitivamente o projeto você deverá preencher "deletar-rascunho".');
+                error('Please correct the following errors: To permanently delete the project you must fill in "delete-draft".');
             }
             return false;
         };
@@ -63,13 +63,13 @@ const deleteProjectModalContent = {
                   [
                       m('.fontsize-base.u-marginbottom-60',
                           [
-                              'O projeto será deletado permanentemente e todos os dados que você preencheu na edição do rascunho não poderão ser recuperados.'
+                              'The project will be permanently deleted and all the data you filled in the draft edition will not be retrieved.'
                           ]
                     ),
                       m('.fontsize-base.u-marginbottom-10',
                           [
-                              'Confirme escrevendo ',
-                              'no campo abaixo ',
+                              'Please confirm by writing ',
+                              'in the field below ',
                               m('span.fontweight-semibold.text-error',
                           'deletar-rascunho'
                         )

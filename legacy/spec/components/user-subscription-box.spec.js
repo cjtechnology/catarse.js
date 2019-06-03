@@ -25,7 +25,7 @@ describe('UserSubscriptionBox', () => {
         });
 
         it('Should render new value of the current paid subscription', () => {
-            expect($subscriptionVersionWithNewDataShow.contains('R$ 10')).toBeTrue(); 
+            expect($subscriptionVersionWithNewDataShow.contains('$ 10')).toBeTrue(); 
         });
 
         it('Should render new reward of the current paid subscription', () => {

@@ -59,7 +59,7 @@ const projectContributions = {
         lContributionsPerDay.load().then(contributionsPerDay);
 
         const contributionsPerLocationTable = [
-            ['Estado', 'Apoios', 'R$ apoiados (% do total)']
+            ['Estado', 'Apoios', '$ apoiados (% do total)']
         ];
         const buildPerLocationTable = contributions => (!_.isEmpty(contributions)) ? _.map(_.first(contributions).source, (contribution) => {
             const column = [];
@@ -68,7 +68,7 @@ const projectContributions = {
             column.push(contribution.total_contributions);
             column.push([contribution.total_contributed, [ // Adding row with custom comparator => read project-data-table description
                 m(`input[type="hidden"][value="${contribution.total_contributed}"`),
-                'R$ ',
+                '$ ',
                 h.formatNumber(contribution.total_contributed, 2, 3),
                 m('span.w-hidden-small.w-hidden-tiny', ` (${contribution.total_on_percentage.toFixed(2)}%)`)
             ]]);
@@ -166,15 +166,15 @@ const projectContributions = {
                         }
                     }, [!ctrl.lContributionsPerDay() ? m.component(projectDataChart, {
                         collection: ctrl.contributionsPerDay,
-                        label: 'R$ arrecadados por dia',
+                        label: '$ collected per day',
                         dataKey: 'total_amount',
                         xAxis: item => h.momentify(item.paid_at),
-                        emptyState: 'Apoios não contabilizados'
+                        emptyState: 'Unaccounted support'
                     }) : h.loader()]),
                 ]),
                 m('.w-row',
                     m('.w-col.w-col-12.u-text-center', [
-                        m('.fontweight-semibold.u-marginbottom-10.fontsize-large.u-text-center', 'De onde vem os apoios'),
+                        m('.fontweight-semibold.u-marginbottom-10.fontsize-large.u-text-center', 'Where does the support come from?'),
                         (!ctrl.lContributionsPerLocation() ? !_.isEmpty(_.rest(ctrl.contributionsPerLocationTable)) ? m.component(projectDataTable, {
                             table: ctrl.contributionsPerLocationTable,
                             defaultSortIndex: -2

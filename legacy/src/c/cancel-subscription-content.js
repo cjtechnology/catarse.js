@@ -40,7 +40,7 @@ const cancelSubscriptionContent = {
                 m('.fontsize-base.u-marginbottom-20', [
                     'Sua assinatura de ',
                     m('span.fontweight-semibold',
-                  `R$${args.subscription.amount / 100}`
+                  `$${args.subscription.amount / 100}`
                  ),
                     ' para o projeto ',
                     m('span.fontweight-semibold',
@@ -84,7 +84,7 @@ const cancelSubscriptionContent = {
                     m('.fontsize-base', [
                         'Tem certeza que você quer solicitar o cancelamento de sua assinatura de ',
                         m('span.fontweight-semibold',
-                            `R$${args.subscription.amount / 100}`
+                            `$${args.subscription.amount / 100}`
                         ),
                         ' para o projeto ',
                         m('span.fontweight-semibold',

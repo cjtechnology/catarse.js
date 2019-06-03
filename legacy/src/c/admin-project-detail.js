@@ -200,12 +200,12 @@ const adminProjectDetail = {
                         m('span.fontweight-semibold',
                             'Meta:'
                         ),
-                        ` R$ ${h.formatNumber(item.goal, 2, 3)}\ `,
+                        ` $ ${h.formatNumber(item.goal, 2, 3)}\ `,
                         m('br'),
                         m('span.fontweight-semibold',
                             'Alcançado:'
                         ),
-                        ` R$ ${h.formatNumber(item.pledged, 2, 3)}\ `
+                        ` $ ${h.formatNumber(item.pledged, 2, 3)}\ `
                     ]),
                     m('.fontsize-smallest.lineheight-looser', [
                         m('span.fontweight-semibold',

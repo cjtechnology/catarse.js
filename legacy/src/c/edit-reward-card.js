@@ -210,7 +210,7 @@ const editRewardCard = {
                             m('.w-row', [
                                 m('.w-col.w-col-3.w-col-small-3.w-col-tiny-3.text-field.positive.prefix.no-hover',
                                     m('.fontsize-smallest.fontcolor-secondary.u-text-center',
-                                        'R$'
+                                        '$'
                                     )
                                 ),
                                 m('.w-col.w-col-9.w-col-small-9.w-col-tiny-9',

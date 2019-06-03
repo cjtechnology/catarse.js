@@ -6,7 +6,7 @@ const adminSubscription = {
         const subscription = args.item;
         return m('.w-row.admin-contribution', [
             m('.fontweight-semibold.fontsize-small',
-              `R$${subscription.amount / 100} por mês`
+              `$${subscription.amount / 100} por mês`
              ),
             m('.fontsize-smaller.fontweight-semibold',
               `(${subscription.paid_count} mês ativo)`

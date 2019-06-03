@@ -68,7 +68,7 @@ const adminProjectItem = {
                     ),
                     m('.u-text-center-small-only.w-clearfix.w-col.w-col-8',
                         m('.fontsize-smaller.u-right',
-                            `R$${project.pledged} de R$${project.goal}`
+                            `$${project.pledged} de $${project.goal}`
                         )
                     )
                 ])

@@ -66,7 +66,7 @@ const projectCard = {
                     m('.fontsize-smallest.lineheight-tightest', h.momentify(project.expires_at))
                 ] : [
                     m('.fontsize-smaller.fontweight-semibold', `${remainingTextObj.total} ${remainingTextObj.unit}`),
-                    m('.fontsize-smallest.lineheight-tightest', (remainingTextObj.total > 1) ? 'Restantes' : 'Restante')
+                    m('.fontsize-smallest.lineheight-tightest', (remainingTextObj.total > 1) ? 'Remaining' : 'Remaining')
                 ];
             }
             return [
@@ -131,7 +131,7 @@ const projectCard = {
                                 m('.fontsize-base.fontweight-semibold', `${Math.floor(project.progress)}%`)
                             ]),
                             m('.w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-center-small-only', [
-                                m('.fontsize-smaller.fontweight-semibold', `R$ ${h.formatNumber(project.pledged)}`),
+                                m('.fontsize-smaller.fontweight-semibold', `$ ${h.formatNumber(project.pledged)}`),
                                 m('.fontsize-smallest.lineheight-tightest', window.I18n.t(`pledged.${project.mode}`, I18nScope()))
                             ]),
                             m('.w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-right', ctrl.cardCopy(project)),

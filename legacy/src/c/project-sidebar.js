@@ -30,7 +30,7 @@ const projectSidebar = {
                         incrementProgress = () => {
                             if (progress <= parseInt(project().progress)) {
                                 progressBar.style.width = `${progress}%`;
-                                pledgedEl.innerText = `R$ ${h.formatNumber(pledged)}`;
+                                pledgedEl.innerText = `$ ${h.formatNumber(pledged)}`;
                                 contributorsEl.innerText = `${parseInt(contributors)} pessoas`;
                                 el.innerText = `${progress}%`;
                                 pledged += pledgedIncrement;
@@ -86,7 +86,7 @@ const projectSidebar = {
                 const states = {
                     approved: window.I18n.t('display_status.approved', I18nScope()),
                     online: h.existy(project().zone_expires_at) && project().open_for_contributions ? window.I18n.t('display_status.online', I18nScope({ date: h.momentify(project().zone_expires_at) })) : '',
-                    failed: window.I18n.t('display_status.failed', I18nScope({ date: h.momentify(project().zone_expires_at), goal: `R$ ${h.formatNumber(project().goal, 2, 3)}` })),
+                    failed: window.I18n.t('display_status.failed', I18nScope({ date: h.momentify(project().zone_expires_at), goal: `$ ${h.formatNumber(project().goal, 2, 3)}` })),
                     rejected: window.I18n.t('display_status.rejected', I18nScope()),
                     in_analysis: window.I18n.t('display_status.in_analysis', I18nScope()),
                     successful: window.I18n.t('display_status.successful', I18nScope({ date: h.momentify(project().zone_expires_at) })),
@@ -109,8 +109,8 @@ const projectSidebar = {
                     m('.project-stats-info', [
                         m('.u-marginbottom-20', [
                             m(`#pledged.${isSub ? 'fontsize-larger' : 'fontsize-largest'}.fontweight-semibold.u-text-center-small-only`, [
-                                `R$ ${pledged ? h.formatNumber(pledged) : '0'}`,
-                                isSub ? m('span.fontsize-large', ' por mês') : null
+                                `$ ${pledged ? h.formatNumber(pledged) : '0'}`,
+                                isSub ? m('span.fontsize-large', ' a month') : null
                             ]),
                             isSub ? m('.fontsize-small.u-text-center-small-only', [
                                 window.I18n.t('subscribers_call', I18nScope()),
@@ -118,8 +118,8 @@ const projectSidebar = {
                             ])
                                 : m('.fontsize-small.u-text-center-small-only', [
                                     window.I18n.t('contributors_call', I18nScope()),
-                                    m('span#contributors.fontweight-semibold', window.I18n.t('contributors_count', I18nScope({ count: totalContributors }))),
-                                    (!project().expires_at && elapsed) ? ` em ${window.I18n.t(`datetime.distance_in_words.x_${elapsed.unit}`, { count: elapsed.total }, I18nScope())}` : ''
+                                    m('span#contributors.fontweight-semibold', ` ${window.I18n.t('contributors_count', I18nScope({ count: totalContributors }))}`),
+                                    (!project().expires_at && elapsed) ? ` in ${window.I18n.t(`datetime.distance_in_words.x_${elapsed.unit}`, { count: elapsed.total }, I18nScope())}` : ''
                                 ])
                         ]),
                         m('.meter', [
@@ -130,14 +130,14 @@ const projectSidebar = {
                             })
                         ]),
                         isSub
-                            ? m('.fontsize-smaller.fontweight-semibold.u-margintop-10', `${progress ? parseInt(progress) : '0'}% de R$${subGoal.value} por mês`)
+                            ? m('.fontsize-smaller.fontweight-semibold.u-margintop-10', `${progress ? parseInt(progress) : '0'}% in $${subGoal.value} por mês`)
                             : m('.w-row.u-margintop-10', [
                                 m('.w-col.w-col-5.w-col-small-6.w-col-tiny-6', [
                                     m('.fontsize-small.fontweight-semibold.lineheight-tighter', `${progress ? parseInt(progress) : '0'}%`)
                                 ]),
                                 m('.w-col.w-col-7.w-col-small-6.w-col-tiny-6.w-clearfix', [
                                     m('.u-right.fontsize-small.lineheight-tighter', remaining && remaining.total ? [
-                                        m('span.fontweight-semibold', remaining.total), window.I18n.t(`remaining_time.${remaining.unit}`, I18nScope({ count: remaining.total }))
+                                        m('span.fontweight-semibold', remaining.total), ` ${window.I18n.t(`remaining_time.${remaining.unit}`, I18nScope({ count: remaining.total }))}`
                                     ] : '')
                                 ])
                             ])

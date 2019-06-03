@@ -23,7 +23,7 @@ const menuSearch = {
                                   )
                               ),
                             m('a.btn.btn-small.btn-terciary.see-more-projects[href=\'javascript:void(0);\']',
-                                  ' ver todos'
+                                  ` ${window.I18n.t('projects.index.see_all')}`
                               )
                         ]
                       )
