@@ -105,8 +105,8 @@ const rewardSelectCard = {
                     checked: ctrl.isSelected(reward),
                     name: 'contribution[reward_id]'
                 }),
-                m(`label.w-form-label.fontsize-base.fontweight-semibold.u-marginbottom-10[for="contribution_reward_${reward.id}"]`, !reward.id ? 'Apoiar sem recompensa' :
-                    `R$ ${h.formatNumber(reward.minimum_value)} ou mais${args.isSubscription ? ' por mês' : ''}`
+                m(`label.w-form-label.fontsize-base.fontweight-semibold.u-marginbottom-10[for="contribution_reward_${reward.id}"]`, !reward.id ? 'Support without reward' :
+                    `$ ${h.formatNumber(reward.minimum_value)} ou mais${args.isSubscription ? ' por mês' : ''}`
                 ), !ctrl.isSelected(reward) ? '' : m('.w-row.back-reward-money', [
                     rewardVM.hasShippingOptions(reward) ?
                     m('.w-sub-col.w-col.w-col-4', [
@@ -130,11 +130,11 @@ const rewardSelectCard = {
                         class: rewardVM.hasShippingOptions(reward) ?
                             'w-col-4' : 'w-col-8'
                     }, [
-                        m('.fontcolor-secondary.u-marginbottom-10', `Valor do apoio${args.isSubscription ? ' mensal' : ''}`),
+                        m('.fontcolor-secondary.u-marginbottom-10', `Value of support${args.isSubscription ? ' monthly' : ''}`),
                         m('.w-row.u-marginbottom-20', [
                             m('.w-col.w-col-3.w-col-small-3.w-col-tiny-3',
                                 m('.back-reward-input-reward.medium.placeholder',
-                                    'R$'
+                                    '$'
                                 )
                             ),
                             m('.w-col.w-col-9.w-col-small-9.w-col-tiny-9',
@@ -151,14 +151,14 @@ const rewardSelectCard = {
                         ]),
                         m('.fontsize-smaller.text-error.u-marginbottom-20.w-hidden', [
                             m('span.fa.fa-exclamation-triangle'),
-                            ' O valor do apoio está incorreto'
+                            ' Support amount is incorrect'
                         ])
                     ]),
                     m('.submit-form.w-col.w-col-4',
                         m('button.btn.btn-medium.u-margintop-30', {
                             onclick: ctrl.submitContribution
                         }, [
-                            'Continuar  ',
+                            'Continue  ',
                             m('span.fa.fa-chevron-right')
                         ])
                     )

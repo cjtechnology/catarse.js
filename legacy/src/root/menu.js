@@ -42,7 +42,7 @@ const menu = {
                         ),
                         args.menuShort ? '' : m('div#menu-components', [
                             m('a.w-hidden-small.w-hidden-tiny.header-link.w-nav-link[href=\'/start\']', window.I18n.t('layouts.header.submit')),
-                            m('a.w-hidden-small.w-hidden-tiny.header-link.w-nav-link[href=\'/explore?ref=ctrse_header\']', { config: m.route }, 'Explore'),
+                            m('a.w-hidden-small.w-hidden-tiny.header-link.w-nav-link[href=\'/explore?ref=ctrse_header\']', { config: m.route }, window.I18n.t('layouts.header.explore')),
                             m.component(menuSearch)
                         ])
                     ]

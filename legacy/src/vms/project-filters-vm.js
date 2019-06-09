@@ -127,12 +127,12 @@ const projectFiltersVM = () => {
                 keyName: 'successful'
             },
             not_sub: {
-                title: 'Point projects',
-                nicename: 'Point projects',
+                title: window.I18n.t("projects.index.point_projects"),
+                nicename: window.I18n.t("projects.index.point_projects"),
                 filter: notSub,
                 isContextual: false,
                 keyName: 'not_sub',
-                header_badges: []
+                header_badges: ['badge-aon-h-margin', 'badge-flex-h-margin']
             },
             all_modes: {
                 title: window.I18n.t("projects.explore.all_projects"),

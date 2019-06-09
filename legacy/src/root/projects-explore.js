@@ -356,7 +356,7 @@ const projectsExplore = {
                                     },
                                     class: ctrl.currentMode() === 'not_sub' ? 'selected' : ''
                                 },
-                                'Point Projects'
+                                window.I18n.t("projects.index.point_projects")
                             ),
                             m("a.explore-filter-link[href=\'javascript:void(0);\']", {
                                     onclick: () => {

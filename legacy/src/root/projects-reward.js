@@ -71,7 +71,7 @@ const projectsReward = {
             m('.w-section.header-cont-new',
                     m('.w-container',
                         m('.fontweight-semibold.lineheight-tight.text-success.fontsize-large.u-text-center-small-only', [
-                            'Escolha a recompensa e o valor do apoio',
+                            'Choose the reward and value of the support',
                             m.trust('&nbsp;'),
                             m('span.fontsize-small.badge.badge-success', '(Join in until 6x)')
                         ])

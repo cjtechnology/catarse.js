@@ -68,7 +68,7 @@ const adminProjectItem = {
                     ),
                     m('.u-text-center-small-only.w-clearfix.w-col.w-col-8',
                         m('.fontsize-smaller.u-right',
-                            `$${project.pledged} de $${project.goal}`
+                            `$${project.pledged} in $${project.goal}`
                         )
                     )
                 ])
@@ -89,7 +89,7 @@ const adminProjectItem = {
                             `${project.total_published} projetos criados`
                         ),
                         m('.fontcolor-secondary.fontsize-smallest',
-                            'Ainda não apoiou projetos'
+                            'Has not yet supported projects'
                         )
                     ])
                 ])

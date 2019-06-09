@@ -203,7 +203,7 @@ const projectRewardCard = {
                              )
                         ]) : '',
                         m('.fontcolor-secondary.u-marginbottom-10',
-                          `Valor do apoio${isSub ? ' mensal' : ''}`
+                          `Value of support${isSub ? ' monthly' : ''}`
                          ),
                         m('.w-row.u-marginbottom-20', [
                             m('.w-col.w-col-3.w-col-small-3.w-col-tiny-3',

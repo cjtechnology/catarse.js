@@ -96,7 +96,7 @@ const projectGoalEdit = {
                                     ]),
                                     m('.u-text-center.fontsize-smaller', [
                                         m('a.mode-diff-toggle.link-hidden-light.fontweight-semibold[href="javascript:void(0);"]', { onclick: ctrl.showModeDiff.toggle }, [
-                                            'Veja a diferença entre os modelos ',
+                                            'See the difference between the models ',
                                             m('span.fa.fa-chevron-down')
                                         ])
                                     ]),
@@ -122,7 +122,7 @@ const projectGoalEdit = {
                                         m('.w-col.w-col-8', [
                                             m('.w-row', [
                                                 m('.w-col.w-col-4.w-col-small-6.w-col-tiny-6.text-field.prefix.no-hover.medium.prefix-permalink', [
-                                                    m('.fontcolor-secondary.u-text-center.fontsize-base.lineheight-tightest', 'R$')
+                                                    m('.fontcolor-secondary.u-text-center.fontsize-base.lineheight-tightest', '$')
                                                 ]),
                                                 m('.w-col.w-col-8.w-col-small-6.w-col-tiny-6.label-hide',
                                                     [
@@ -182,7 +182,7 @@ const projectGoalEdit = {
                                                 ]),
                                                 m('.w-col.w-col-4.w-col-tiny-6.w-col-small-6', [
                                                     m('.text-field.medium.prefix-permalink.u-text-center', [
-                                                        m('', 'dias')])
+                                                        m('', 'days')])
                                                 ])
                                             ]),
                                             vm.e.inlineError('online_days')

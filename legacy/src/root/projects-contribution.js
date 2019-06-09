@@ -15,7 +15,7 @@ const projectsContribution = {
         const rewards = () => _.union(
             [{
                 id: null,
-                description: 'Obrigado. Eu só quero ajudar o projeto.',
+                description: 'Thank you. I just want to help the project.',
                 minimum_value: 10,
                 shipping_options: null,
                 row_order: -9999999
@@ -57,7 +57,7 @@ const projectsContribution = {
                         m('.w-section.header-cont-new',
                         m('.w-container',
                             m('.fontweight-semibold.lineheight-tight.text-success.fontsize-large.u-text-center-small-only', [
-                                'Escolha a recompensa e o valor do apoio',
+                                'Choose the reward and value of the support',
                                 m.trust('&nbsp;'),
                                 m('span.fontsize-small.badge.badge-success', '(Join in until 6x)')
                             ])

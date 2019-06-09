@@ -60,9 +60,7 @@ const projectsHome = {
                     wrapperClass: 'hero-full hero-full-slide',
                     sliderTime: 10000
                 }),
-                m(projectsDisplay),
-                (false ? m.component(UnsignedFriendFacebookConnect, { largeBg: true }) : ''),
-                m.component(blogBanner)
+                m(projectsDisplay)
             ]
         );
     }

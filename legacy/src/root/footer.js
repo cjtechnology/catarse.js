@@ -125,7 +125,7 @@ const footer = {
                 m('.w-container',
                     m('.footer-full-copyleft',
                         [
-                            m('img.u-marginbottom-20[alt=\'Logo footer\'][src=\'/assets/logo-footer.png\']'),
+                            m('img.u-marginbottom-20[alt=\'Logo footer\'][src=\'/assets/logo-footer.png\'][style="width:100px;"]'),
                             m('.lineheight-loose',
                                 m('a.link-footer-inline[href=\'http://realcapital.com.au\']',
                                    ` Real Capital | ${new Date().getFullYear()} `
